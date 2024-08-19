@@ -1,58 +1,32 @@
 import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ReactDOM from 'react-dom';
 
+import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import './App.css';
+import Home from './Pages/home';
+import Servicios from './Pages/servicios';
+import Testimonios from './Pages/testimonios';
+import Nosotros from './Pages/nosotros';
+import Blog from './Pages/blog';
+import Citas from './Pages/citas';
 
 function App() {
-  const [iconName, setIconName] = useState("menu")
-  function onToggleMenu() {
-    // Cambia el icono entre "menu" y "close"
-    setIconName((prevName) => (prevName === 'menu' ? 'close' : 'menu'));
-  }
-
+  
   return (
-    <main>
-      <header class="bg-[#161616]">
-        <nav class="flex justify-between">
-          <div class="flex flex-col px-16 py-4 text-white">
-            <h1 class="text-4xl font-bold">ANTONELLO</h1>
-            <h2 class="text-xl font-medium">Trajes y camisas a medida</h2>
-          </div>
-          <div class="absolute md:min-h-fit md:static top-[-100%] min-h-[60vh] left-0 w-full flex items-center md:justify.end">
-            <ul class="flex md:flex-row px-5 py-8 m-4 flex-col flex-grow justify-end md:gap-24 gap-[4vh]">
-              <li>
-                <a href="/" class="text-white py-4 px-8">
-                  Servicios
-                </a>
-              </li>
-              <li>
-                <a href="/" class="text-white py-4 px-8">
-                  Testimonios
-                </a>
-              </li>
-              <li>
-                <a href="/" class="text-white py-4 px-8">
-                  Nosotros
-                </a>
-              </li>
-              <li>
-                <a href="/" class="text-white py-4 px-8">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="/" class="text-white py-4 px-8 md:border">
-                  Citas
-                </a>
-              </li>
-            </ul>
-          </div>
-          <ion-icon
-            onClick={onToggleMenu}
-            name={iconName}
-            class="text-white text-4xl md:hidden cursor-pointer mt-8 mr-4"></ion-icon>
-        </nav>
-      </header>
-    </main>
+    <Router>
+      <Header/>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/servicios" element={<Servicios/>} />
+        <Route path="/testimonios" element={<Testimonios/>} />
+        <Route path="/nosotros" element={<Nosotros/>} />
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/citas" element={<Citas/>} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
