@@ -1,10 +1,16 @@
 import backgroundImage from '../assets/imagenes/background-home.png';
+
 import nuestraHistoria from '../assets/imagenes/historia1.jpg';
 import CardServices from '../components/CardServices';
-import Contacto from '../components/Contacto';
+import Contacto from '../components/gralComponents/Contacto';
 import blog1 from '../assets/imagenes/blog1.jpg';
 import blog2 from '../assets/imagenes/blog2.jpg';
 import CardBlogs from '../components/CardBlogs';
+import traje1 from '../assets/imagenes/traje1.jpg';
+import camisa1 from '../assets/imagenes/camisa1.jpg';
+import traje2 from '../assets/imagenes/traje2.jpg';
+import CarruselBrands from '../components/gralComponents/CarruselBrands';
+import VisitShowroom from '../components/gralComponents/VisitShowroom';
 
 const Home = () => {
   const blogs = [
@@ -21,16 +27,39 @@ const Home = () => {
       description: 'Explora las últimas tendencias en moda masculina.',
     },
   ];
+  const services = [
+    {
+      title: 'Trajes a la medida',
+      description:
+        'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable.',
+      imageUrl: traje1,
+      link: '#',
+    },
+    {
+      title: 'Camisas a la medida',
+      description:
+        'Nuestras camisas a la medida combinan elegancia y comodidad, con los mejores materiales para un acabado excepcional.',
+      imageUrl: camisa1,
+      link: '#',
+    },
+    {
+      title: 'Accesorios',
+      description:
+        'Complementa tu look con nuestros accesorios de lujo seleccionados para complementar tu estilo único.',
+      imageUrl: traje2,
+      link: '#',
+    },
+  ];
 
   return (
     <main>
       <div
         id="hero"
-        className="bg-cover bg-no-repeat h-screen  "
+        className="bg-cover bg-no-repeat h-screen bg-fixed "
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}>
-        <div className="h-screen w-screen bg-gradient-to-t from-black to-trasparent flex items-center justify-around bg-left  flex-col">
+        <div className="h-screen  bg-gradient-to-t from-black to-trasparent flex items-center justify-around bg-left  flex-col">
           <div className="text-white text-center   ">
             <h1 className="text-5xl md:text-9xl my-2 font-serif mx-4">ANTONELLO</h1>
             <h3 className="text-xl md:text-4xl">Trajes y camisas a medida</h3>
@@ -48,10 +77,9 @@ const Home = () => {
               viewBox="0 0 24 24"
               fill="#bbad81"
               stroke="#bbad81"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-down">
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M12 5l0 14" />
               <path d="M16 15l-4 4" />
@@ -60,12 +88,22 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-screen h-72 bg-black "></div>
-      <div id="servicios" className="my-[-15rem] mx-8">
+
+      <div className=" md:h-72 bg-black "></div>
+      <div id="servicios" className="mt-[-15rem] mx-8">
         <h2 className=" text-6xl  md:text-8xl font-serif text-white"> Servicios</h2>
-        <CardServices />
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
+          {services.map((service, index) => (
+            <CardServices
+              key={index}
+              title={service.title}
+              description={service.description}
+              imageUrl={service.imageUrl}
+              link={service.link}
+            />
+          ))}
+        </div>
       </div>
-      {/* nuestra hisotira */}
 
       <section className="flex flex-col md:flex-row items-center justify-center py-16  my-[17rem] mx-8">
         <figure className="w-full md:w-1/2 flex justify-center md:justify-end px-4">
@@ -94,15 +132,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* contactanos */}
-
       <Contacto />
-      {/* experiencia de clientes */}
-      <div className="bg-black w-screen h-64">
+
+      <div className="bg-black  h-64">
         <h1 className="text-white"> experiencias de clientes</h1>
       </div>
-
-      {/* blog */}
 
       <div className="flex flex-col items-center  bg-[#fbf8f3]">
         <h2 className="text-6xl font-serif my-8">Blog</h2>
@@ -118,7 +152,14 @@ const Home = () => {
             />
           ))}
         </div>
+        <button className="border bg-[#BCAD7E] text-white py-4 px-8 rounded font-semibold my-4">
+          Ver más
+        </button>
       </div>
+
+      <VisitShowroom />
+
+      <CarruselBrands /> 
     </main>
   );
 };

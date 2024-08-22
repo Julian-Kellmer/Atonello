@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/gralComponents/Header';
+import Footer from './components/gralComponents/Footer';
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
-import './App.css';
 import Home from './Pages/home';
-import Servicios from './Pages/servicios';
+import Servicios from './Pages/Servicios';
 import Testimonios from './Pages/testimonios';
 import Nosotros from './Pages/nosotros';
 import Blog from './Pages/blog';
@@ -16,7 +15,7 @@ function App() {
   
   return (
     <Router>
-      <Header/>
+      <Header />
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/servicios" element={<Servicios/>} />
