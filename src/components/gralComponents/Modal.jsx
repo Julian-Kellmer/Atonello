@@ -6,7 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css/effect-fade";
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 
 {
   /* Esto es momentaneo. Cuando tengamos las imagenes les ponemos de nombre en comun diferenciandolas por color y se cambia la url. Se hace dinamico */
@@ -46,9 +47,10 @@ const Modal = ({ isOpen, closeModal, slides }) => {
 
             <Swiper
               navigation={true}
+              effect={"fade"}
               pagination={{ clickable: true }}
               spaceBetween={30}
-              modules={[Pagination, Navigation]}
+              modules={[Pagination, Navigation, EffectFade]}
               className="mySwiper"
             >
               {slides.map((slide, index) => (
