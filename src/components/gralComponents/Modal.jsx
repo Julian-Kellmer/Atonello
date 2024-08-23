@@ -7,15 +7,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
+{
+  /* Esto es momentaneo. Cuando tengamos las imagenes les ponemos de nombre en comun diferenciandolas por color y se cambia la url. Se hace dinamico */
+}
+const getImageUrlForColor = (color) => {
+  return `https://placehold.co/200x200/${color.replace(
+    / /g,
+    "-"
+  )}/FFFFFF?text=${color}`;
+};
+
 const Modal = ({ isOpen, closeModal, slides }) => {
-  {
-    /* Esto es momentaneo. Cuando tengamos las imagenes les ponemos de nombre en comun diferenciandolas por color y se cambia la url. Se hace dinamico */
-  }
-  const getImageUrlForColor = (color) => {
-    return `https://placehold.co/200x200/${color.replace(
-      / /g,
-      "-"
-    )}/FFFFFF?text=${color}`;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [selectedContent, setSelectedContent] = useState({});
+
+  const handleImageClick = (index, slide) => {
+    setSelectedImageIndex(index);
+    setSelectedContent({
+      colors: slide.colors,
+      materials: slide.materials,
+    });
   };
 
   return (
@@ -49,7 +60,8 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                           key={idx}
                           src={getImageUrlForColor(color)}
                           alt={color}
-                          className="mt-2"
+                          className="mt-2 cursor-pointer"
+                          onClick={() => handleImageClick(idx, slide)}
                         />
                       ))}
                     </div>
