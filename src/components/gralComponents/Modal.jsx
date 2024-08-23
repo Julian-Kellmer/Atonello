@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,9 +20,15 @@ const getImageUrlForColor = (color) => {
 
 const Modal = ({ isOpen, closeModal, slides }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [fadeState, setFadeState] = useState("fade-enter");
+
+  useEffect(() => {
+    setFadeState("fade-enter-active");
+  }, [selectedIndex]);
 
   const handleImageClick = (index) => {
     setSelectedIndex(index);
+    setFadeState("fade-enter");
   };
 
   return (
@@ -62,7 +68,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                       ))}
                     </div>
 
-                    <div className="col-span-1 md:col-span-4 bg-gray-300 p-4">
+                    <div className={`${fadeState} col-span-1 md:col-span-4 bg-gray-300 p-4`}>
                       <Swiper
                         spaceBetween={30}
                         centeredSlides={true}
@@ -73,11 +79,15 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                         modules={[Autoplay]}
                         className="mySwiper"
                       >
-                        <SwiperSlide>Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
+                         <SwiperSlide>
+                          {slide.colors[selectedIndex]} - Data 1
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          {slide.materials[selectedIndex]} - Data 2
+                        </SwiperSlide>
                       </Swiper>
                     </div>
-                    <div className="col-span-1 md:col-span-5 bg-gray-400 p-4">
+                    <div className={`${fadeState} col-span-1 md:col-span-5 bg-gray-400 p-4`}>
                       <h2 className="text-lg font-semibold">
                         {slide.modalTitle}
                       </h2>
