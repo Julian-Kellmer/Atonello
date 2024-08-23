@@ -27,6 +27,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
   }, [selectedIndex]);
 
   const handleImageClick = (index) => {
+    if (index === selectedIndex) return;
     setSelectedIndex(index);
     setFadeState("fade-enter");
   };
@@ -83,7 +84,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                           {slide.colors[selectedIndex]} - Data 1
                         </SwiperSlide>
                         <SwiperSlide>
-                          {slide.materials[selectedIndex]} - Data 2
+                          {slide.colors[selectedIndex]} - Data 2
                         </SwiperSlide>
                       </Swiper>
                     </div>
