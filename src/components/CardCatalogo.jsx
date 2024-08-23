@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from "./gralComponents/Modal";
 
-const CardCatalogo = ({ imgUrl, titulo, description, index, modalTitle, modalDescription, colors, materials }) => {
+const CardCatalogo = ({ imgUrl, titulo, description, index, slides }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -36,10 +36,7 @@ const CardCatalogo = ({ imgUrl, titulo, description, index, modalTitle, modalDes
       <Modal
         isOpen={isOpen}
         closeModal={closeModal}
-        modalTitle={modalTitle}
-        modalDescription={modalDescription}
-        colors={colors}
-        materials={materials}
+        slides={slides}
       />
     </>
   );

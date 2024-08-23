@@ -63,30 +63,54 @@ const infoCatalogos = [
     descripcion:
       'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
     imgUrl: catalogo1,
-    modalTitle: 'Traje 1',
-    modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-    colors: ['Negro', 'Gris oscuro'],
-    materials: ['Lana', 'Seda'],
+    slides: [{ 
+        modalTitle: 'Traje 1',
+        modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+        colors: ['Negro', 'Gris oscuro'],
+        materials: ['Lana', 'Seda']
+      },
+      {
+        modalTitle: 'Traje 1',
+        modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+        colors: ['Negro', 'Gris oscuro'],
+        materials: ['Lana', 'Seda'],
+    }]
   },
   {
     titulo: 'TRAJES A LA MEDIDA',
     descripcion:
       'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
     imgUrl: catalogo2,
-    modalTitle: 'Traje 2',
-    modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-    colors: ['Negro', 'Gris oscuro'],
-    materials: ['Lana', 'Seda'],
+    slides: [{ 
+      modalTitle: 'Traje 1',
+      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+      colors: ['Negro', 'Gris oscuro'],
+      materials: ['Lana', 'Seda']
+    },
+    {
+      modalTitle: 'Traje 1',
+      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+      colors: ['Negro', 'Gris oscuro'],
+      materials: ['Lana', 'Seda'],
+  }]
   },
   {
     titulo: 'TRAJES A LA MEDIDA',
     descripcion:
       'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
     imgUrl: catalogo3,
-    modalTitle: 'Traje 3',
-    modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-    colors: ['Negro', 'Gris oscuro'],
-    materials: ['Lana', 'Seda'],
+    slides: [{ 
+      modalTitle: 'Traje 1',
+      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+      colors: ['Negro', 'Gris oscuro'],
+      materials: ['Lana', 'Seda']
+    },
+    {
+      modalTitle: 'Traje 1',
+      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+      colors: ['Negro', 'Gris oscuro'],
+      materials: ['Lana', 'Seda'],
+  }]
   },
 ];
 
@@ -133,10 +157,7 @@ const Servicios = () => {
               titulo={infoCatalogo.titulo}
               description={infoCatalogo.descripcion}
               imgUrl={infoCatalogo.imgUrl}
-              modalTitle={infoCatalogo.modalTitle}
-              modalDescription={infoCatalogo.modalDescription}
-              colors={infoCatalogo.colors}
-              materials={infoCatalogo.materials}
+              slides={infoCatalogo.slides}
             />
           ))}
         </div>
