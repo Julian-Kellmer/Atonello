@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Modal = ({ isOpen, closeModal, slides}) => {
     return (
@@ -19,8 +19,14 @@ const Modal = ({ isOpen, closeModal, slides}) => {
                 X
                 </button>
 
-                <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                    <SwiperSlide>Slide 1</SwiperSlide>
+                <Swiper 
+                    navigation={ true } 
+                    pagination={{ clickable: true }}
+                    spaceBetween={ 30 }
+                    autoplay={{ delay: 2500, disableOnInteraction: false }}
+                    modules={[Autoplay, Pagination, Navigation]} 
+                    className="mySwiper">
+                    <SwiperSlide className='h-96'>Slide 1</SwiperSlide>
                     <SwiperSlide>Slide 2</SwiperSlide>
                     <SwiperSlide>Slide 3</SwiperSlide>
                 </Swiper>
