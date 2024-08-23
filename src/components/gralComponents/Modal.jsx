@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,15 +19,10 @@ const getImageUrlForColor = (color) => {
 };
 
 const Modal = ({ isOpen, closeModal, slides }) => {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  const [selectedContent, setSelectedContent] = useState({});
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const handleImageClick = (index, slide) => {
-    setSelectedImageIndex(index);
-    setSelectedContent({
-      colors: slide.colors,
-      materials: slide.materials,
-    });
+  const handleImageClick = (index) => {
+    setSelectedIndex(index);
   };
 
   return (
@@ -61,10 +57,11 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                           src={getImageUrlForColor(color)}
                           alt={color}
                           className="mt-2 cursor-pointer"
-                          onClick={() => handleImageClick(idx, slide)}
+                          onClick={() => handleImageClick(idx)}
                         />
                       ))}
                     </div>
+
                     <div className="col-span-1 md:col-span-4 bg-gray-300 p-4">
                       <Swiper
                         spaceBetween={30}
@@ -86,18 +83,14 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                       </h2>
                       <p>{slide.modalDescription}</p>
                       <ul className="list-disc pl-5">
-                        {slide.colors.map((color, idx) => (
-                          <li key={idx} className="text-base">
-                            {color}
-                          </li>
-                        ))}
+                      <li className="text-base">
+                          {slide.colors[selectedIndex]}
+                        </li>
                       </ul>
                       <ul className="list-disc pl-5">
-                        {slide.materials.map((color, idx) => (
-                          <li key={idx} className="text-base">
-                            {color}
-                          </li>
-                        ))}
+                        <li className="text-base">
+                          {slide.materials[selectedIndex]}
+                        </li>
                       </ul>
                     </div>
                   </div>

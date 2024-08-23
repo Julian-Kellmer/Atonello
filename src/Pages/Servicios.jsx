@@ -90,8 +90,8 @@ const infoCatalogos = [
     {
       modalTitle: 'Traje 2',
       modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-      colors: ['Negro', 'Gris oscuro'],
-      materials: ['Lana', 'Seda'],
+      colors: ['Blanco'],
+      materials: ['Seda'],
     }]
   },
   {
