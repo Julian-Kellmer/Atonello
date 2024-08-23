@@ -67,13 +67,13 @@ const infoCatalogos = [
         modalTitle: 'Traje 1',
         modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
         colors: ['Negro', 'Gris oscuro'],
-        materials: ['Lana', 'Seda']
+        materials: ['Lana', 'Lana']
       },
       {
-        modalTitle: 'Traje 1',
+        modalTitle: 'Traje 2',
         modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-        colors: ['Negro', 'Gris oscuro'],
-        materials: ['Lana', 'Seda'],
+        colors: ['Blanco'],
+        materials: ['Seda'],
     }]
   },
   {
@@ -88,11 +88,11 @@ const infoCatalogos = [
       materials: ['Lana', 'Seda']
     },
     {
-      modalTitle: 'Traje 1',
+      modalTitle: 'Traje 2',
       modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
       colors: ['Negro', 'Gris oscuro'],
       materials: ['Lana', 'Seda'],
-  }]
+    }]
   },
   {
     titulo: 'TRAJES A LA MEDIDA',
