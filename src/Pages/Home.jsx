@@ -11,6 +11,7 @@ import camisa1 from '../assets/imagenes/camisa1.jpg';
 import traje2 from '../assets/imagenes/traje2.jpg';
 import CarruselBrands from '../components/gralComponents/CarruselBrands';
 import VisitShowroom from '../components/gralComponents/VisitShowroom';
+import Carrusel from '../components/Carrusel';
 
 const Home = () => {
   const blogs = [
@@ -138,8 +139,8 @@ const Home = () => {
 
       <Contacto />
 
-      <div className="bg-black  h-64">
-        <h1 className="text-white"> experiencias de clientes</h1>
+      <div className="bg-black flex w-full hidden md:block ">
+        <Carrusel />
       </div>
 
       <div className="flex flex-col items-center  bg-[#fbf8f3]">
