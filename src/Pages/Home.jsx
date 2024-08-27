@@ -105,7 +105,7 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="flex flex-col md:flex-row items-center justify-center py-16  my-[17rem] mx-8">
+      <section className="flex flex-col relative md:flex-row items-start justify-center py-16  my-[17rem] mx-8">
         <figure className="w-full md:w-1/2 flex justify-center md:justify-end px-4">
           <img
             className="w-full h-auto max-w-4lg object-cover border-4 border-[#bbad81]"
@@ -113,22 +113,26 @@ const Home = () => {
             alt="Nuestra Historia"
           />
         </figure>
-        <div className="w-full md:w-1/2 px-4 mt-8 md:mt-0">
-          <h2 className="text-4xl font-serif text-right text-[#333]">
-            <span className="block text-xl font-normal">nuestra</span>
+        <div className="w-full md:w-1/2 px-4 mt-8 md:mt-0 items-start">
+          <span className="block text-xl md:text-5xl font-serif text-right mr-24 ">Nuestra</span>
+          <h2 className="text-8xl font-serif text-right text-[#333] mr-48">
             HISTORIA
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-right text-[#666]">
-            Río Bravo by Antonello es una boutique de sastrería, camisería y accesorios para
-            caballeros con cuatro décadas de experiencia en el mercado. Como una empresa familiar,
-            nos hemos destacado por ofrecer las mejores telas y la confección más refinada del país.
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-right text-[#666]">
-            Nuestros diseños personalizados y la calidad excepcional de nuestros materiales y mano
-            de obra son reconocidos a nivel mundial. Por ello, representamos las marcas más
-            exclusivas de telas y accesorios, como lo son Dormeuil, Zignone, Holland & Sherry, y
-            Stefano Ricci.
-          </p>
+
+          <div className='absolute left-[40%] top-[45%] w-3/6 text-left bg-[#bbad7f] py-4 px-8 '>
+
+            <p className="mt-6 text-lg leading-relaxed  text-white">
+              Río Bravo by Antonello es una boutique de sastrería, camisería y accesorios para
+              caballeros con cuatro décadas de experiencia en el mercado. Como una empresa familiar,
+              nos hemos destacado por ofrecer las mejores telas y la confección más refinada del país.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed  text-white">
+              Nuestros diseños personalizados y la calidad excepcional de nuestros materiales y mano
+              de obra son reconocidos a nivel mundial. Por ello, representamos las marcas más
+              exclusivas de telas y accesorios, como lo son Dormeuil, Zignone, Holland & Sherry, y
+              Stefano Ricci.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -159,7 +163,7 @@ const Home = () => {
 
       <VisitShowroom />
 
-      <CarruselBrands /> 
+      <CarruselBrands />
     </main>
   );
 };
