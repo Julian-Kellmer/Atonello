@@ -8,7 +8,7 @@ import Home from './Pages/Home';
 import Servicios from './Pages/Servicios';
 import Testimonios from './Pages/testimonios';
 import Nosotros from './Pages/nosotros';
-import Blog from './Pages/blog';
+import Blog from './Pages/Blog';
 import Citas from './Pages/citas';
 
 function App() {
