@@ -20,9 +20,7 @@ const Carrusel = () => {
 
       updateGallery() {
         this.CarouselArray.forEach((el) => {
-          el.classList.remove("gallery-item-1");
-          el.classList.remove("gallery-item-2");
-          el.classList.remove("gallery-item-3");
+          el.classList.remove("gallery-item-1", "gallery-item-2", "gallery-item-3");
         });
 
         this.CarouselArray.slice(0, 3).forEach((el, i) => {
@@ -40,6 +38,9 @@ const Carrusel = () => {
       }
 
       setControls() {
+        // Limpia los controles existentes
+        galleryControlsContainer.innerHTML = '';
+
         this.CarouselControls.forEach((control) => {
           const button = document.createElement("button");
           button.className = `gallery-controls-${control}`;
@@ -65,6 +66,9 @@ const Carrusel = () => {
 
     return () => {
       // Cleanup event listeners if needed
+      galleryControlsContainer.childNodes.forEach((control) => {
+        control.removeEventListener("click", () => {});
+      });
     };
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts.
 
