@@ -12,6 +12,7 @@ import traje2 from '../assets/imagenes/traje2.jpg';
 import CarruselBrands from '../components/gralComponents/CarruselBrands';
 import VisitShowroom from '../components/gralComponents/VisitShowroom';
 import Carrusel from '../components/Carrusel';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const blogs = [
@@ -66,7 +67,7 @@ const Home = () => {
             <h3 className="text-xl md:text-4xl">Trajes y camisas a medida</h3>
           </div>
           <div className="text-white text-xl font-semibold text-center bg-[#bbad81] py-2 px-6 hover:text-2xl hover:rounded transition-all duration-200 ease-in-out">
-            <button>Agendar cita</button>
+            <button> <Link to="/citas">Agendar cita </Link></button>
           </div>
           <div className=" flex flex-col items-center  ">
             <span className="text-white">Explora nuestra colección</span>
@@ -91,7 +92,7 @@ const Home = () => {
       </div>
 
       <div className=" md:h-72 bg-black "></div>
-      <div id="servicios" className="mt-[-15rem] mx-8">
+      <div id="servicios" className="mt-[-15rem] md:mx-8 mx-4">
         <h2 className=" text-6xl  md:text-8xl font-serif text-white"> Servicios</h2>
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
           {services.map((service, index) => (
@@ -105,8 +106,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-
-      <section className="flex flex-col relative md:flex-row items-start justify-center py-16  my-[17rem] mx-8">
+      <section className="flex flex-col relative md:flex-row items-start justify-center py-16  md:mt-[17rem]  md:mx-8">
         <figure className="w-full md:w-1/2 flex justify-center md:justify-end px-4">
           <img
             className="w-full h-auto max-w-4lg object-cover border-4 border-[#bbad81]"
@@ -115,19 +115,19 @@ const Home = () => {
           />
         </figure>
         <div className="w-full md:w-1/2 px-4 mt-8 md:mt-0 items-start">
-          <span className="block text-xl md:text-5xl font-serif text-right mr-24 ">Nuestra</span>
-          <h2 className="text-8xl font-serif text-right text-[#333] mr-48">
+          <span className="block text-xl md:text-5xl font-serif md:text-right md:mr-24 ">Nuestra</span>
+          <h2 className="md:text-8xl text-4xl font-serif text-left md:text-right text-[#333]  ">
             HISTORIA
           </h2>
 
-          <div className='absolute left-[40%] top-[45%] w-3/6 text-left bg-[#bbad7f] py-4 px-8 '>
+          <div className='md:absolute relative md:left-[40%] md:top-[45%] md:w-3/6 text-left bg-[#bbad7f] py-4 px-6  '>
 
-            <p className="mt-6 text-lg leading-relaxed  text-white">
+            <p className="mt-6 md:text-lg leading-relaxed  text-white">
               Río Bravo by Antonello es una boutique de sastrería, camisería y accesorios para
               caballeros con cuatro décadas de experiencia en el mercado. Como una empresa familiar,
               nos hemos destacado por ofrecer las mejores telas y la confección más refinada del país.
             </p>
-            <p className="mt-4 text-lg leading-relaxed  text-white">
+            <p className="mt-4 md:text-lg leading-relaxed  text-white">
               Nuestros diseños personalizados y la calidad excepcional de nuestros materiales y mano
               de obra son reconocidos a nivel mundial. Por ello, representamos las marcas más
               exclusivas de telas y accesorios, como lo son Dormeuil, Zignone, Holland & Sherry, y
@@ -158,13 +158,13 @@ const Home = () => {
           ))}
         </div>
         <button className="border bg-[#BCAD7E] text-white py-4 px-8 rounded font-semibold my-4">
-          Ver más
+          <Link to="/blog">Ver más</Link>
         </button>
       </div>
 
       <VisitShowroom />
 
-      <CarruselBrands />
+    
     </main>
   );
 };

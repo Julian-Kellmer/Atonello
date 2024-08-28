@@ -30,8 +30,9 @@ const Header = () => {
           </div>
           <div
             id="navBar"
-            className={`nav-links md:block bg-[#161616] absolute md:relative mt-5 md:min-h-fit top-[8%] left-0 flex items-center transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 h-[65vh] top-[10vh]' : 'opacity-0 h-0'
-              } md:opacity-100 md:h-auto`}>
+            className={`nav-links md:block bg-[#161616] absolute md:relative mt-5 md:min-h-fit top-[8%] left-0 w-full flex items-center justify-center 
+                        transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 h-[65vh] top-[10vh]' : 'opacity-0 h-0'
+                        } md:opacity-100 md:h-auto`}>
             <ul className="flex md:flex-row px-5 py-8 flex-col justify-center gap-[6vh] text-xl text-center">
               {navItems.map((item) => (
                 <li key={item.name}>

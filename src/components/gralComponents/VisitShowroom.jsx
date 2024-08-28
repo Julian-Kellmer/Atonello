@@ -3,12 +3,12 @@ import footerImage from '../../assets/imagenes/footerbg.jpg';
 const VisitShowroom = () => {
   return (
     <div
-      className="flex-col flex md:flex-row bg-cover bg-no-repeat justify-center "
+      className="flex-col flex md:flex-row bg-cover bg-no-repeat justify-center  px-4"
       style={{
         backgroundImage: `url(${footerImage})`,
       }}>
-      <div className="flex flex-col py-24 gap-4  text-white items-center  flex-1">
-        <h5 className="text-6xl ">visita nuestro</h5>
+      <div className="flex flex-col md:py-24 py-16 gap-4  text-white items-center  flex-1">
+        <h5 className="md:text-6xl text-4xl  ">Visita Nuestro</h5>
         <h4 className="md:text-7xl text-4xl ">SHOWROOM</h4>
       </div>
       <div className="flex flex-col text-white   flex-1 py-24 text-center items-center">

@@ -17,7 +17,7 @@ const Testimonios = () => {
           <div className="text-white text-start w-full max-w-screen-lg px-8">
             <div className="flex flex-col md:flex-row items-start md:items-center w-full space-y-4 md:space-y-0 ">
               <div className="md:w-2/3">
-                <h1 className="text-5xl md:text-9xl font-serif mb-4">SERVICIOS</h1>
+                <h1 className="text-5xl md:text-9xl font-serif mb-4">Testimonios</h1>
                 <p className="text-lg md:text-xl leading-relaxed">
                   En Antonello, ofrecemos una experiencia de sastrería única, con atención
                   meticulosa a cada detalle. Desde trajes a medida y camisas personalizadas hasta

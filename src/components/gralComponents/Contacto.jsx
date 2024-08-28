@@ -1,6 +1,6 @@
 const Contacto = () => {
   return (
-    <section className="bg-[#f2efea] flex flex-col text-center justify-center justify-around items-center h-64 md:h-80">
+    <section className="bg-[#f2efea] flex flex-col text-center justify-center justify-around items-center h-64 px-8 md:h-80">
         <h1 className="text-black font-serif text-4xl md:text-7xl">CONTACTANOS</h1>
         <div className='px-4 text-sm md:text-lg'>
           <p> Estamos aquí para ayudarte a lucir tu mejor versión </p>

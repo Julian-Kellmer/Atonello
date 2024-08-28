@@ -37,10 +37,10 @@ const Nosotros = () => {
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}>
-        <div className="h-screen bg-gradient-to-t from-black to-transparent flex flex-col justify-end pb-40">
+        <div className="h-screen bg-gradient-to-t from-black to-transparent flex flex-col justify-end md:pb-40">
           <div className="text-white text-start px-16">
             <h1 className="text-5xl md:text-9xl my-2 font-serif mx-4">Nuestra Historia</h1>
-            <p className="text-lg md:text-xl w-full md:w-1/2 pt-8">
+            <p className="text-lg md:text-xl w-full md:w-1/2 py-8">
               Hace cuatro décadas, Antonello ha sido sinónimo de elegancia, calidad y tradición en
               el mundo de la sastrería. Fundada por Antonello, nuestra boutique ha crecido para
               convertirse en un referente de la moda masculina, ofreciendo trajes a medida, camisas
@@ -50,16 +50,16 @@ const Nosotros = () => {
         </div>
       </div>
 
-      <div className="md:h-72 bg-black"></div>
-      <figure className="relative h-72 md:h-96 w-full  -mt-36 md:-mt-48">
-        <img src={localImage} alt="Imagen de la tienda" className="mx-auto object-cover w-3/4 h-full" />
+      <div className="md:h-72 bg-black hidden md:block"></div>
+      <figure className="relative h-72 pt-8 md:h-96 w-full  md:-mt-48">
+        <img src={localImage} alt="Imagen de la tienda" className="md:mx-auto object-cover md:w-3/4 h-full" />
       </figure>
 
-      <section className='px-16 py-32' >
+      <section className='px-4 py-4 md:py-32' >
         <div >
           <div className='flex flex-col'></div>
           <h2 className='font-serif  text-6xl'>Nuestra mision</h2>
-          <p className='w-2/3 py-8 '>
+          <p className='md:w-2/3 w-full md:py-8 p-8 '>
             En Antonello, nuestra misión es transformar la manera en que los hombres se visten, proporcionando trajes y prendas que no solo se ajusten perfectamente, sino que también reflejen el estilo y la personalidad de cada cliente. Nos enorgullece ser parte de los momentos más importantes en la vida de nuestros clientes, desde bodas y galas hasta reuniones de negocios y eventos especiales.</p>
         </div>
         <div className='relative w-full '>
