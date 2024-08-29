@@ -24,7 +24,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
   const [fadeState, setFadeState] = useState("fade-enter");
 
   useEffect(() => {
-    setFadeState("fade-enter-active");
+    setFadeState("fade-enter-active"); 
   }, [selectedIndex]);
 
   const handleImageClick = (index) => {
