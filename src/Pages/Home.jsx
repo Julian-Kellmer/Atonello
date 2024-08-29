@@ -139,7 +139,7 @@ const Home = () => {
 
       <Contacto />
 
-      <div className="bg-black flex w-full hidden md:block ">
+      <div className="bg-black flex w-full hidden md:block asasasa">
         <Carrusel />
       </div>
 
