@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import Home from './Pages/home';
 import Servicios from './Pages/Servicios';
 import Testimonios from './Pages/testimonios';
-import Nosotros from './Pages/nosotros';
-import Blog from './Pages/blog';
+import Nosotros from './Pages/Nosotros';
+import Blog from './Pages/Blog';
 import Citas from './Pages/citas';
 
 function App() {

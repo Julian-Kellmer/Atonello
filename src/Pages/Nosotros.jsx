@@ -64,7 +64,7 @@ const Nosotros = () => {
         </div>
         <div className='relative w-full '>
           <img src={antonelloProfile} alt="" className='md:w-[700px] ' />
-          <div className='bg-white absolute left-[30%] top-[30%] w-3/5  '>
+          <div className='bg-white md:absolute left-[30%] top-[30%] md:w-3/5 w-full '>
             <p className='px-8 py-8'>Antonello Martínez nació en una pequeña ciudad, donde desde muy joven mostró un gran interés por la moda y el diseño. Tras años de aprendizaje, Antonello decidió llevar su pasión y habilidades a un nuevo nivel. En busca de nuevos horizontes y oportunidades, se trasladó y fundó su propia sastrería en 1984. <br /> <br />
 
               Con un enfoque en la calidad artesanal y la atención meticulosa a los detalles, Antonello rápidamente se ganó una reputación por sus trajes impecables y su dedicación al cliente. Su visión siempre ha sido ofrecer prendas que no solo se ajusten perfectamente, sino que también cuenten una historia personal y única para cada cliente. Hoy en día, aunque Antonello ha pasado el testigo a la nueva generación, su legado y valores continúan siendo el corazón de nuestra boutique</p>
@@ -104,7 +104,7 @@ const Nosotros = () => {
         </div>
       </section>
 
-      <article className="flex justify-center w-full py-24">
+      <article className="flex md:flex-row flex-col md:gap-0 gap-16 justify-center w-full py-24">
         {cardData.map((data, index) => (
           <CardNosotros
             key={index}

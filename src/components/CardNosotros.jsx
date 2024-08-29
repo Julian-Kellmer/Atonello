@@ -1,6 +1,6 @@
 const CardNosotros = ({ imgUrl, title, text }) => {
     return (
-      <div className="bg-transparent  max-w-[350px] mx-auto flex flex-col items-center text-center p-4 scale-110">
+      <div className="bg-transparent  max-w-[350px] mx-16 flex flex-col items-center text-center p-4 scale-110">
         <div className="relative w-full">
           {/* Contenedor de la Imagen con Fondo Dorado en la Mitad Inferior */}
           <div className="w-full h-48 relative flex flex-col justify-end">
