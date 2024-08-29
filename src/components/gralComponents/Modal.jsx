@@ -24,7 +24,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
   const [fadeState, setFadeState] = useState("fade-enter");
 
   useEffect(() => {
-    setFadeState("fade-enter-active"); 
+    setFadeState("fade-enter-active");
   }, [selectedIndex]);
 
   const handleImageClick = (index) => {
@@ -37,7 +37,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
     <>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300">
-          <div className="bg-white p-8 rounded-lg shadow-lg relative md:max-w-7xl mx-auto">
+          <div className="bg-[ #FBF8F4] p-8 rounded-lg shadow-lg relative md:max-w-7xl mx-auto">
             <button
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
               onClick={closeModal}
@@ -56,10 +56,11 @@ const Modal = ({ isOpen, closeModal, slides }) => {
               {slides.map((slide, index) => (
                 <SwiperSlide
                   key={index}
-                  className="p-4 border rounded-lg bg-gray-100 shadow-md h-96 w-full"
+                  className="p-4 border rounded-lg bg-[#FBF8F4] shadow-md h-96 w-full"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-10 gap-4">
-                    <div className="col-span-1 md:col-span-1 bg-gray-200 p-4">
+                    {/* aca comiensa las fotitos del costado */}
+                    <div className="col-span-1 md:col-span-1 bg-[ #FBF8F4] p-4">
                       {slide.colors.map((color, idx) => (
                         <img
                           key={idx}
@@ -70,8 +71,8 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                         />
                       ))}
                     </div>
-
-                    <div className={`${fadeState} col-span-1 md:col-span-4 bg-gray-300 p-4`}>
+                    {/* aca comienza las fotos del traje que hacen slide */}
+                    <div className={`${fadeState} col-span-1 md:col-span-4 bg-[#FBF8F4] p-4`}>
                       <Swiper
                         spaceBetween={30}
                         centeredSlides={true}
@@ -82,7 +83,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                         modules={[Autoplay]}
                         className="mySwiper"
                       >
-                         <SwiperSlide>
+                        <SwiperSlide>
                           {slide.colors[selectedIndex]} - Data 1
                         </SwiperSlide>
                         <SwiperSlide>
@@ -90,21 +91,31 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                         </SwiperSlide>
                       </Swiper>
                     </div>
-                    <div className={`${fadeState} col-span-1 md:col-span-5 bg-gray-400 p-4`}>
-                      <h2 className="text-lg font-semibold">
+                    {/* contenido a modificar */}
+                    <div className={`${fadeState} col-span-1 md:col-span-5 bg-[#FBF8F4] h-96 p-4 `}>
+                      <h2 className="text-5xl font-serif pb-4">
                         {slide.modalTitle}
                       </h2>
+                      <div className="w-full h-0.5 bg-[#bcad7r] "></div>
                       <p>{slide.modalDescription}</p>
-                      <ul className="list-disc pl-5">
-                      <li className="text-base">
-                          {slide.colors[selectedIndex]}
-                        </li>
-                      </ul>
-                      <ul className="list-disc pl-5">
-                        <li className="text-base">
-                          {slide.materials[selectedIndex]}
-                        </li>
-                      </ul>
+                      <div className="border w-3/6 flex flex-row">
+                        <div className="h-24 w-24 border"> image</div>
+                        <div className="bg-white flex-1">
+                          <ul className="list-disc pl-5">
+                            <p className="text-[#BCAD7E] font-medium text-lg font-serif ">{"Color"}</p>
+                            <li className="text-base list-none text-sm font-semibold">
+                              {slide.colors[selectedIndex]}
+                            </li>
+                          </ul>
+                          <ul className="list-disc pl-5">
+                            <p className="text-[#BCAD7E] font-medium font-serif">{"Material"}</p>
+                            <li className="text-base list-none text-sm font-semibold">
+                              {slide.materials[selectedIndex]}
+                            </li>
+                          </ul>
+                          <div className="w-full h-[5px] bg-[#BCAD7E]"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>
