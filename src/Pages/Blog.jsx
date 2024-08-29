@@ -87,12 +87,11 @@ const Blog = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-      <div
-        className=" md:h-72 bg-[#002B55]"></div>
-=======
+
+      <div className=" md:h-72 bg-[#002B55]"></div>
+
       <div className="w-screen md:h-72 bg-[#002B55]"></div>
->>>>>>> 072927d7aaa652c8cc8f29624d72490622642ce3
+
 
       <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap8 my-8 mx-16 md:mt-[-10rem]">
         {blogsArr.map((blog, index) => (
