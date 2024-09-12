@@ -24,15 +24,15 @@ const Header = () => {
         <nav className="flex justify-between overflow-hidden">
           <div className="flex flex-col text-center px-8 py-4 md:px-16  text-white">
             <Link to="/">
-              <h1 className="text-3xl font-bold">ANTONELLO</h1>
-              <h2 className="text-l font-medium">Trajes y camisas a medida</h2>
+              <h1 className="text-3xl font-didot  ">ANTONELLO</h1>
+              <h2 className="text-l font-birthstone">Trajes y camisas a medida</h2>
             </Link>
           </div>
           <div
             id="navBar"
             className={`nav-links md:block bg-[#161616] absolute md:relative mt-5 md:min-h-fit top-[8%] left-0 w-full flex items-center justify-center 
                         transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 h-[65vh] top-[10vh]' : 'opacity-0 h-0'
-                        } md:opacity-100 md:h-auto`}>
+              } md:opacity-100 md:h-auto`}>
             <ul className="flex md:flex-row px-5 py-8 flex-col justify-center gap-[6vh] text-xl text-center">
               {navItems.map((item) => (
                 <li key={item.name}>

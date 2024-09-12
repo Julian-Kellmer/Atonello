@@ -67,7 +67,7 @@ const Carrusel = () => {
     return () => {
       // Cleanup event listeners if needed
       galleryControlsContainer.childNodes.forEach((control) => {
-        control.removeEventListener("click", () => {});
+        control.removeEventListener("click", () => { });
       });
     };
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts.
@@ -75,9 +75,20 @@ const Carrusel = () => {
   return (
     <div className="gallery w-full items-center">
       <div className="gallery-container flex mx-auto items-center h-[400px] max-w-[1000px] relative">
-        <img src={carrusel1} className="gallery-item gallery-item-1" data-index="1" alt="" />
-        <img src={carrusel2} className="gallery-item gallery-item-2" data-index="2" alt="" />
-        <img src={carrusel3} className="gallery-item gallery-item-3" data-index="3" alt="" />
+        <div data-index="1">
+          <h1 className="text-white"> hola</h1>
+          <img src={carrusel1} className="gallery-item gallery-item-1"  alt="" />
+        </div>
+        <div data-index="2">
+          <h1 className="text-white"> hola</h1>
+          <img src={carrusel2} className="gallery-item gallery-item-2"  alt="" />
+
+        </div>
+        <div data-index="3">
+          <h1 className="text-white"> hola</h1>
+          <img src={carrusel3} className="gallery-item gallery-item-3"  alt="" />
+
+        </div>
       </div>
       <div className="gallery-controls"></div>
     </div>

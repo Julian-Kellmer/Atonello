@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        commissioner: ['Commissioner', 'sans-serif'], // Corrected single declaration for Commissioner
+        birthstone: ['Birthstone', 'cursive'],       // Added Birthstone
+        didot: ['Didot', 'serif'],                   // Added Didot
+      },
+    },
   },
   plugins: [],
 }

@@ -8,11 +8,11 @@ const VisitShowroom = () => {
         backgroundImage: `url(${footerImage})`,
       }}>
       <div className="flex flex-col md:py-24 py-16 gap-4  text-white items-center  flex-1">
-        <h5 className="md:text-6xl text-4xl  ">Visita Nuestro</h5>
-        <h4 className="md:text-7xl text-4xl ">SHOWROOM</h4>
+        <h5 className="md:text-6xl text-4xl font-didot  "> <span className='font-birthstone'>Visita</span> nuestro</h5>
+        <h4 className="md:text-7xl text-4xl font-didot">SHOWROOM</h4>
       </div>
       <div className="flex flex-col text-white   flex-1 py-24 text-center items-center">
-        <h5 className="text-2xl px-8">
+        <h5 className="text-2xl px-8 font-commissioner">
           Hamburgo 213, juarez Cuauhtemoc,
           <br /> 06600 CDMX
         </h5>

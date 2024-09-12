@@ -63,14 +63,14 @@ const Home = () => {
         }}>
         <div className="h-screen  bg-gradient-to-t from-black to-trasparent flex items-center justify-around bg-left  flex-col">
           <div className="text-white text-center   ">
-            <h1 className="text-5xl md:text-9xl my-2 font-serif mx-4">ANTONELLO</h1>
-            <h3 className="text-xl md:text-4xl">Trajes y camisas a medida</h3>
+            <h1 className="text-5xl md:text-9xl my-2 font-didot mx-4">ANTONELLO</h1>
+            <h3 className=" text-xl md:text-6xl font-birthstone">Trajes y camisas a medida</h3>
           </div>
-          <div className="text-white text-xl font-semibold text-center bg-[#bbad81] py-2 px-6 hover:text-2xl hover:rounded transition-all duration-200 ease-in-out">
+          <div className="text-white text-xl font-regular text-center bg-[#bbad81] py-2 px-6 hover:text-2xl hover:rounded transition-all duration-200 ease-in-out font-commissioner">
             <button> <Link to="/citas">Agendar cita </Link></button>
           </div>
           <div className=" flex flex-col items-center  ">
-            <span className="text-white">Explora nuestra colección</span>
+            <span className="text-white font-commissioner">Explora nuestra colección</span>
             <svg
               className="text-[#bbad81] cursor-pointer m-auto"
               xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ const Home = () => {
 
       <div className=" md:h-72 bg-black "></div>
       <div id="servicios" className="mt-[-15rem] md:mx-8 mx-4">
-        <h2 className=" text-6xl  md:text-8xl font-serif text-white"> Servicios</h2>
+        <h2 className=" text-6xl  md:text-8xl font-didot text-white"> Servicios</h2>
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
           {services.map((service, index) => (
             <CardServices
@@ -115,12 +115,12 @@ const Home = () => {
           />
         </figure>
         <div className="w-full md:w-1/2 px-4 mt-8 md:mt-0 items-start">
-          <span className="block text-xl md:text-5xl font-serif md:text-right md:mr-24 ">Nuestra</span>
-          <h2 className="md:text-8xl text-4xl font-serif text-left md:text-right text-[#333]  ">
+          <span className="block text-xl md:text-5xl font-birthstone md:text-right md:mr-24 ">Nuestra</span>
+          <h2 className="md:text-8xl text-4xl font-didot text-left md:text-right text-[#333]  ">
             HISTORIA
           </h2>
 
-          <div className='md:absolute relative md:left-[40%] md:top-[45%] md:w-3/6 text-left bg-[#bbad7f] py-4 px-6  '>
+          <div className='md:absolute relative md:left-[40%] md:top-[45%] md:w-3/6 text-left bg-[#bbad7f] py-4 px-6 font-comissioner   '>
 
             <p className="mt-6 md:text-lg leading-relaxed  text-white">
               Río Bravo by Antonello es una boutique de sastrería, camisería y accesorios para
@@ -144,7 +144,7 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col items-center  bg-[#fbf8f3]">
-        <h2 className="text-6xl font-serif my-8">Blog</h2>
+        <h2 className="text-6xl font-didot my-8">Blog</h2>
 
         <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap8 my-8 mx-16">
           {blogs.map((blog, index) => (
@@ -157,14 +157,14 @@ const Home = () => {
             />
           ))}
         </div>
-        <button className="border bg-[#BCAD7E] text-white py-4 px-8 rounded font-semibold my-4">
+        <button className="border bg-[#BCAD7E] text-white py-4 px-8 rounded font-commissioner font-semibold my-4">
           <Link to="/blog">Ver más</Link>
         </button>
       </div>
 
       <VisitShowroom />
 
-    
+
     </main>
   );
 };
