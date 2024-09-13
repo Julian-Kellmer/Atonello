@@ -105,7 +105,7 @@ const Blog = () => {
 
 
 
-      <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap8 my-8 mx-16 md:mt-[-10rem]">
+      <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8  md:mt-[-10rem]">
         {blogs.map((blog, index) => (
           <CardBlogs
             key={index} // Usa un identificador único para las keys

@@ -207,10 +207,10 @@ const Home = () => {
         <Carrusel />
       </div>
 
-      <div className="flex flex-col items-center  bg-[#fbf8f3]">
-        <h2 className="text-6xl font-didot my-8">Blog</h2>
+      <div className="  bg-[#fbf8f3] flex flex-col py-8 ">
+        <h2 className="text-6xl font-didot my-8 mx-auto py-8">Blog</h2>
 
-        <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap8 my-8 mx-16">
+        <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 py-8 ">
           {console.log(posts)}
           {posts.map((post, index) => (
             <CardBlogs
