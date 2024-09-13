@@ -1,5 +1,5 @@
+import { useState, useEffect } from 'react';
 import backgroundImage from '../assets/imagenes/imagenes/home/background.png';
-
 import nuestraHistoria from '../assets/imagenes/imagenes/home/nuestraHistoria.png';
 import CardServices from '../components/CardServices';
 import Contacto from '../components/gralComponents/Contacto';
@@ -14,7 +14,34 @@ import VisitShowroom from '../components/gralComponents/VisitShowroom';
 import Carrusel from '../components/Carrusel';
 import { Link } from 'react-router-dom';
 
+
+
 const Home = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const response = await fetch("https://antonello-panel-7mcg.onrender.com/api");
+      const data = await response.json();
+
+      const formattedData = data.map(post => {
+        const date = new Date(post.createdAt);
+
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0'); 
+        const day = String(date.getDate()).padStart(2, '0'); 
+
+        const formattedDate = `${year}/${month}/${day}`; 
+
+        return { ...post, createdAt: formattedDate }; 
+      });
+
+      setPosts(formattedData);
+    };
+
+    fetchBlogs();
+  }, []);
+
   const blogs = [
     {
       fecha: 'fecha',
@@ -36,6 +63,18 @@ const Home = () => {
         'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable.',
       imageUrl: traje1,
       link: '#',
+      slides: [{
+        modalTitle: 'Traje Cruzado',
+        modalDescription: 'El traje cruzado es un símbolo de sofisticación y estilo clásico. Con su diseño distintivo de solapas superpuestas y dos filas de botones, este tipo de traje ofrece un ajuste estructurado y una presencia imponente. Ideal para ocasiones formales y eventos importantes, el traje cruzado proyecta autoridad y elegancia, asegurando que te destaques con un look atemporal y refinado.',
+        colors: ['Rayas Azul', 'Azul Marino'],
+        materials: ['Lino', 'Mezcla Lana']
+      },
+      {
+        modalTitle: 'Traje de 3 PIEZAS',
+        modalDescription: ' Perfecto para bodas, eventos formales y ocasiones especiales, el traje de 3 piezas permite un look versátil, ya que el chaleco puede llevarse con o sin la chaqueta, ofreciendo opciones tanto para momentos más formales como para un toque elegante en reuniones más relajadas.',
+        colors: ['Tostado'],
+        materials: ['Lino'],
+      }]
     },
     {
       title: 'Camisas a la medida',
@@ -43,6 +82,18 @@ const Home = () => {
         'Nuestras camisas a la medida combinan elegancia y comodidad, con los mejores materiales para un acabado excepcional.',
       imageUrl: camisa1,
       link: '#',
+      slides: [{
+        modalTitle: 'Camisas PREMIUM',
+        modalDescription: 'Descubre nuestra colección de camisas premium, confeccionadas con los tejidos más finos y una precisión impecable. Cada camisa está diseñada para ofrecerte una comodidad sin igual y un ajuste perfecto, haciendo que cada ocasión especial sea aún más memorable',
+        colors: ['Blanca Oxford', 'Azul claro'],
+        materials: ['Algodon', 'Algodon']
+      },
+      {
+        modalTitle: 'Camisas Para Esmoquin',
+        modalDescription: 'Nuestro exclusivo rango de camisas esmoquin está diseñado para destacar en eventos de gala y ocasiones formales. Con detalles refinados y un ajuste a medida, estas camisas aseguran que te veas impecable y elegante en cada celebración.',
+        colors: ['Blanco'],
+        materials: ['Lino'],
+      }]
     },
     {
       title: 'Accesorios',
@@ -50,6 +101,18 @@ const Home = () => {
         'Complementa tu look con nuestros accesorios de lujo seleccionados para complementar tu estilo único.',
       imageUrl: traje2,
       link: '#',
+      slides: [{
+        modalTitle: 'Accesorios CORBATAS',
+        modalDescription: 'Eleva tu estilo con nuestras corbatas de alta gama. Hechas de seda y otros materiales lujosos, cada corbata ofrece un acabado elegante y sofisticado, ideal para complementar cualquier conjunto con un toque de distinción.',
+        colors: ['Azul Oscuro', 'Rojo'],
+        materials: ['Seda', 'Seda']
+      },
+      {
+        modalTitle: 'Accesorios MANCUERNILLAS',
+        modalDescription: 'Nuestras mancuernillas son el toque final perfecto para tu traje. Diseñadas con elegancia y precisión, aportan un detalle sutil pero impactante a tu atuendo, reflejando un estilo refinado y un gusto impecable.',
+        colors: ['Mancuernillas ryan '],
+        materials: ['Plata'],
+      }]
     },
   ];
 
@@ -102,6 +165,7 @@ const Home = () => {
               description={service.description}
               imageUrl={service.imageUrl}
               link={service.link}
+              slides={service.slides}
             />
           ))}
         </div>
@@ -147,19 +211,20 @@ const Home = () => {
         <h2 className="text-6xl font-didot my-8">Blog</h2>
 
         <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap8 my-8 mx-16">
-          {blogs.map((blog, index) => (
+          {console.log(posts)}
+          {posts.map((post, index) => (
             <CardBlogs
               key={index}
-              fecha={blog.fecha}
-              titulo={blog.titulo}
-              imageUrl={blog.imageUrl}
-              description={blog.description}
+              createdAt={post.createdAt}
+              title={post.title}
+              imageUrl={post.imageUrl}
+              description={post.description}
             />
           ))}
         </div>
-        <button className="border bg-[#BCAD7E] text-white py-4 px-8 rounded font-commissioner font-semibold my-4">
+        {/* <button className="border bg-[#BCAD7E] text-white py-4 px-8 rounded font-commissioner font-semibold my-4">
           <Link to="/blog">Ver más</Link>
-        </button>
+        </button> */}
       </div>
 
       <VisitShowroom />

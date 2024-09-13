@@ -1,5 +1,20 @@
-const CardServices = ({ description, title, imageUrl, index }) => {
+/* eslint-disable react/prop-types */
+import { useState } from 'react'
+import Modal from "./gralComponents/Modal";
+
+const CardServices = ({ description, title, imageUrl, index, slides }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
+    <>
     <div key={index} className="transition-all duration-300 ease-in-out md:hover:scale-110 group">
       <img src={imageUrl} alt={title} className="w-full h-80 object-cover bg-no-repeat" />
       <div className="p-6 bg-[#BCAD7E] md:group-hover:bg-[#fbf8f3] transition-colors duration-300 flex flex-col  gap-8">
@@ -11,12 +26,19 @@ const CardServices = ({ description, title, imageUrl, index }) => {
         </p>
         <dir>
 
-          <a className="text-sm font-semibold text-white  py-4 px-8 bg-[#bcad7e] font-commissioner">
+          <button onClick={openModal} className="bg-[#bbad81] text-white py-2 px-4 rounded-lg font-commissioner text-sm md:text-base hover:bg-[#a59870] transition-all duration-200 ease-in-out">
             Ver más
-          </a>
+          </button>
         </dir>
       </div>
     </div>
+    
+      <Modal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        slides={slides}
+      />
+    </>
   );
 };
 
