@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import blogBackground from "../assets/imagenes/fondosDePaginas/background-blog.jpg";
+import blogBackground from "../assets/imagenes/imagenes/blogs/backgground.png";
 import CardBlogs from "../components/CardBlogs";
 import blog1 from "../assets/imagenes/blog1.jpg";
 import blog2 from "../assets/imagenes/blog2.jpg";

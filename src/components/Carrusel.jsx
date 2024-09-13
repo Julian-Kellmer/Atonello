@@ -75,20 +75,46 @@ const Carrusel = () => {
   return (
     <div className="gallery w-full items-center">
       <div className="gallery-container flex mx-auto items-center h-[400px] max-w-[1000px] relative">
-        <div data-index="1">
-          <h1 className="text-white"> hola</h1>
-          <img src={carrusel1} className="gallery-item gallery-item-1"  alt="" />
-        </div>
-        <div data-index="2">
-          <h1 className="text-white"> hola</h1>
-          <img src={carrusel2} className="gallery-item gallery-item-2"  alt="" />
 
-        </div>
-        <div data-index="3">
-          <h1 className="text-white"> hola</h1>
-          <img src={carrusel3} className="gallery-item gallery-item-3"  alt="" />
+        <div data-index="1" className="gallery-item gallery-item-1  ">
+          <div className="h-3/5 bg-cover bg-no-repeat bg-center  "
+            style={{
+              backgroundImage: `url(${carrusel1})`,
+            }}>
+          </div>
+          <div className="h-3/5 bg-white">
 
+            <p className="text-black text-center px-6 py-4 font-commissioner"> Río Bravo supera todas mis expectativas. Su conocimiento y habilidad para crear trajes a medida es impresionante. Siempre salgo sintiéndome como un caballero de clase mundial.</p>
+            <h5 className="font-bold font-commissioner text-center py-8">Carlos Dominguez</h5>
+          </div>
         </div>
+
+        <div data-index="2" className="gallery-item gallery-item-2  ">
+          <div className="h-3/5 bg-cover bg-no-repeat bg-center "
+            style={{
+              backgroundImage: `url(${carrusel2})`,
+            }}>
+          </div>
+          <div className="h-3/5 bg-white">
+
+            <p className="text-black text-center px-6 py-4 font-commissioner"> He probado muchas sastrerías, pero ninguna se compara con Río Bravo. Su dedicación a la calidad y el servicio personalizado es excepcional. Es mi primera opción para cualquier ocasión especial.</p>
+            <h5 className="font-bold font-commissioner text-center py-8">-Miguel Hernández</h5>
+          </div>
+        </div>
+
+        <div data-index="3" className="gallery-item gallery-item-2  ">
+          <div className="h-3/5 bg-cover bg-no-repeat bg-center "
+            style={{
+              backgroundImage: `url(${carrusel3})`,
+            }}>
+          </div>
+          <div className="h-3/5 bg-white">
+
+            <p className="text-black text-center px-6 py-4 font-commissioner"> La atención al detalle y la calidad de los trajes en Río Bravo es inigualable. Cada vez que llevo un traje hecho por ellos, recibo numerosos cumplidos. Recomiendo encarecidamente sus servicios.</p>
+            <h5 className="font-bold font-commissioner text-center py-8">-Juan Pérez</h5>
+          </div>
+        </div>
+
       </div>
       <div className="gallery-controls"></div>
     </div>

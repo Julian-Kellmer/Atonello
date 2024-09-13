@@ -1,6 +1,6 @@
 const CardNosotros = ({ imgUrl, title, text }) => {
     return (
-      <div className="bg-transparent  max-w-[350px] mx-16 flex flex-col items-center text-center p-4 scale-110">
+      <div className="bg-transparent  max-w-[350px] mx-16 flex flex-col items-center text-center p-4 scale-110 py-8">
         <div className="relative w-full">
           {/* Contenedor de la Imagen con Fondo Dorado en la Mitad Inferior */}
           <div className="w-full h-48 relative flex flex-col justify-end">
@@ -10,7 +10,7 @@ const CardNosotros = ({ imgUrl, title, text }) => {
               alt={title}
             />
             <div className="bg-[#BCAD7E] text-center py-2 flex justify-center items-end w-full h-3/6 mt-[-2rem]">
-              <h3 className="text-4xl font-didot text-white">{title}</h3>
+              <h3 className="text-2xl md:text-4xl font-didot text-white">{title}</h3>
             </div>
           </div>
         </div>

@@ -1,12 +1,12 @@
-import serviciosBackground from '../assets/imagenes/fondosDePaginas/background-servicios.jpg';
+import serviciosBackground from '../assets/imagenes/imagenes/Servicices/background Servicies.png';
 import CardCatalogo from '../components/CardCatalogo';
-import catalogo1 from '../assets/imagenes/catalogo1.jpg';
-import catalogo2 from '../assets/imagenes/catalogo2.jpg';
-import catalogo3 from '../assets/imagenes/catalogo3.jpg';
+import catalogo1 from '../assets/imagenes/imagenes/Servicices/TrajesALaMedida.png';
+import catalogo2 from '../assets/imagenes/imagenes/Servicices/catalogo2.jpg';
+import catalogo3 from '../assets/imagenes/imagenes/Servicices/accesorios.png';
 import CardServices from '../components/CardServices';
-import zapatos from '../assets/imagenes/servicios/zapatos.jpg';
-import corbatas from '../assets/imagenes/servicios/corbatas.jpg';
-import mancuernillas from '../assets/imagenes/servicios/mancuernillas.jpg';
+import zapatos from '../assets/imagenes/imagenes/Servicices/zapatos.png';
+import corbatas from '../assets/imagenes/imagenes/Servicices/corbatas.png';
+import mancuernillas from '../assets/imagenes/imagenes/Servicices/macuernillas.png';
 import carteras from '../assets/imagenes/servicios/carteras.jpg';
 import pañuelos from '../assets/imagenes/servicios/pañuelos.jpg';
 import boinas from '../assets/imagenes/servicios/boinas.jpg';
@@ -64,52 +64,52 @@ const infoCatalogos = [
       'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
     imgUrl: catalogo1,
     slides: [{
-      modalTitle: 'Traje 1',
-      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-      colors: ['Negro', 'Gris oscuro'],
-      materials: ['Lana', 'Lana']
+      modalTitle: 'Traje Cruzado',
+      modalDescription: 'El traje cruzado es un símbolo de sofisticación y estilo clásico. Con su diseño distintivo de solapas superpuestas y dos filas de botones, este tipo de traje ofrece un ajuste estructurado y una presencia imponente. Ideal para ocasiones formales y eventos importantes, el traje cruzado proyecta autoridad y elegancia, asegurando que te destaques con un look atemporal y refinado.',
+      colors: ['Rayas Azul', 'Azul Marino'],
+      materials: ['Lino', 'Mezcla Lana']
     },
     {
-      modalTitle: 'Traje 2',
-      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-      colors: ['Blanco'],
-      materials: ['Seda'],
+      modalTitle: 'Traje de 3 PIEZAS',
+      modalDescription: ' Perfecto para bodas, eventos formales y ocasiones especiales, el traje de 3 piezas permite un look versátil, ya que el chaleco puede llevarse con o sin la chaqueta, ofreciendo opciones tanto para momentos más formales como para un toque elegante en reuniones más relajadas.',
+      colors: ['Tostado'],
+      materials: ['Lino'],
     }]
   },
   {
-    titulo: 'TRAJES A LA MEDIDA',
+    titulo: 'CAMISAS A LA MEDIDA',
     descripcion:
-      'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
+      'Nuestras camisas a la medida combinan elegancia y comodidad, con los mejores materiales para un acabado excepcional. Disfruta de una prenda única que se adapta perfectamente a ti. ',
     imgUrl: catalogo2,
     slides: [{
-      modalTitle: 'Traje 1',
-      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-      colors: ['Negro', 'Gris oscuro'],
-      materials: ['Lana', 'Seda']
+      modalTitle: 'Camisas PREMIUM',
+      modalDescription: 'Descubre nuestra colección de camisas premium, confeccionadas con los tejidos más finos y una precisión impecable. Cada camisa está diseñada para ofrecerte una comodidad sin igual y un ajuste perfecto, haciendo que cada ocasión especial sea aún más memorable',
+      colors: ['Blanca Oxford', 'Azul claro'],
+      materials: ['Algodon', 'Algodon']
     },
     {
-      modalTitle: 'Traje 2',
-      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-      colors: ['Blanco', 'Marron', 'Gris'],
-      materials: ['Seda', 'Lana', 'Seda'],
+      modalTitle: 'Camisas Para Esmoquin',
+      modalDescription: 'Nuestro exclusivo rango de camisas esmoquin está diseñado para destacar en eventos de gala y ocasiones formales. Con detalles refinados y un ajuste a medida, estas camisas aseguran que te veas impecable y elegante en cada celebración.',
+      colors: ['Blanco'],
+      materials: ['Lino'],
     }]
   },
   {
-    titulo: 'TRAJES A LA MEDIDA',
+    titulo: 'Accesorios',
     descripcion:
-      'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
+      'Completa tu look con nuestros accesorios de lujo, seleccionados para complementar tu estilo único. Desde mancuernillas y corbatas hasta pañuelos y boinas, cada accesorio está diseñado con atención al detalle.',
     imgUrl: catalogo3,
     slides: [{
-      modalTitle: 'Traje 1',
-      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-      colors: ['Negro', 'Gris oscuro'],
-      materials: ['Lana', 'Seda']
+      modalTitle: 'Accesorios CORBATAS',
+      modalDescription: 'Eleva tu estilo con nuestras corbatas de alta gama. Hechas de seda y otros materiales lujosos, cada corbata ofrece un acabado elegante y sofisticado, ideal para complementar cualquier conjunto con un toque de distinción.',
+      colors: ['Azul Oscuro', 'Rojo'],
+      materials: ['Seda', 'Seda']
     },
     {
-      modalTitle: 'Traje 1',
-      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-      colors: ['Negro', 'Gris oscuro'],
-      materials: ['Lana', 'Seda'],
+      modalTitle: 'Accesorios MANCUERNILLAS',
+      modalDescription: 'Nuestras mancuernillas son el toque final perfecto para tu traje. Diseñadas con elegancia y precisión, aportan un detalle sutil pero impactante a tu atuendo, reflejando un estilo refinado y un gusto impecable.',
+      colors: ['Mancuernillas ryan '],
+      materials: ['Plata'],
     }]
   },
 ];
@@ -164,7 +164,6 @@ const Servicios = () => {
       </article>
 
       <article className="flex flex-col relative my-16">
-        <h1>hola</h1>
         <div id="servicios" className="px-8">
           <h2 className="text-6xl md:text-8xl font-serif text-black">Otros Servicios</h2>
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-8">

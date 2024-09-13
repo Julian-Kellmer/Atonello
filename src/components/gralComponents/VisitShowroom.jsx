@@ -1,4 +1,4 @@
-import footerImage from '../../assets/imagenes/footerbg.jpg';
+import footerImage from '../../assets/imagenes/imagenes/visitaNuestroShowRoom/main.jpg';
 
 const VisitShowroom = () => {
   return (
@@ -6,6 +6,7 @@ const VisitShowroom = () => {
       className="flex-col  flex md:flex-row bg-cover bg-no-repeat justify-center py-16 px-4 "
       style={{
         backgroundImage: `url(${footerImage})`,
+        // backgroun:
       }}>
       <div className="flex flex-col md:py-16 py-16 gap-4  text-white items-center flex-1">
         <h5 className="md:text-8xl text-4xl font-didot  "> <span className='font-birthstone text-9xl'>Visita</span> nuestro</h5>

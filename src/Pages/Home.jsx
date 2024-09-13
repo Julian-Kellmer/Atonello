@@ -1,6 +1,6 @@
-import backgroundImage from '../assets/imagenes/background-home.png';
+import backgroundImage from '../assets/imagenes/imagenes/home/background.png';
 
-import nuestraHistoria from '../assets/imagenes/historia1.jpg';
+import nuestraHistoria from '../assets/imagenes/imagenes/home/nuestraHistoria.png';
 import CardServices from '../components/CardServices';
 import Contacto from '../components/gralComponents/Contacto';
 import blog1 from '../assets/imagenes/blog1.jpg';

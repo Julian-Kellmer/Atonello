@@ -2,10 +2,10 @@ const Footer = () => {
   return (
     <footer className="bg-[rgb(22,22,22)] text-white py-8 px-4 relative  ">
       <div className="  mx-auto grid px-16 grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-        <div className=" flex flex-col gap-16  text-start">
+        <div className=" flex flex-col gap-16  md:text-start text-center">
         {/* Sección de Teléfono */}
           <div >
-            <h3 className="text-5xl mb-4 font-didot">Teléfono</h3>
+            <h3 className="text-5xl mb-4 font-didot ">Teléfono</h3>
             <div className="font-commissioner text-xl">
               <p className="mb-2 "> Cel.<span className="text-Dorado">55 55 92 33 12</span> </p>
               <p className="mb-2">Tel. <span className="text-Dorado">55 30 58 02 15</span></p>

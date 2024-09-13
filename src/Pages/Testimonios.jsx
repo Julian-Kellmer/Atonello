@@ -6,6 +6,9 @@ import TestimoniosEx from '../components/TestimoniosEx';
 import robert1 from '../assets/imagenes/testimonios/Robertopalazuelos/robert1.jpg';
 import robert2 from '../assets/imagenes/testimonios/Robertopalazuelos/robert2.jpg';
 import robert3 from '../assets/imagenes/testimonios/Robertopalazuelos/robert3.jpg';
+import alberto1 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto1.png'
+import alberto2 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto2.png'
+import alberto3 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto3.png'
 
 const testimoniosData = [
   {
@@ -15,10 +18,10 @@ const testimoniosData = [
     description: 'Roberto Palazuelos ha confiado en Antonello para confeccionar sus trajes a la medida, camisas elegantes y una variedad de accesorios exclusivos. Cada prenda refleja su estilo sofisticado y su exigencia por la excelencia, haciendo de Antonello su sastrería de referencia para todas sus necesidades de vestimenta.',
   },
   {
-    imgUrl: [robert1, robert2, robert3],
-    name: 'Roberto Palazuelos',
-    subName: '"En Antonello, encontré la perfección en cada detalle. Lacalidad de sus trajes y el servicio personalizado superan cualquier expectativa"',
-    description: 'Roberto Palazuelos ha confiado en Antonello para confeccionar sus trajes a la medida, camisas elegantes y una variedad de accesorios exclusivos. Cada prenda refleja su estilo sofisticado y su exigencia por la excelencia, haciendo de Antonello su sastrería de referencia para todas sus necesidades de vestimenta.',
+    imgUrl: [alberto1, alberto2, alberto3],
+    name: 'Alberto Pelaez',
+    subName: '"La elegancia y la calidad de Antonello son incomparables. Cada prenda está hecha con una precisión y cuidado que reflejan el verdadero arte de la sastrería."',
+    description: 'Alberto Peláez ha elegido Antonello para confeccionar sus trajes a medida, camisas de alta calidad y una variedad de accesorios exclusivos. Sus elecciones demuestran su aprecio por el diseño refinado y la impecable artesanía, consolidando a Antonello como su sastrería de confianza para cada ocasión.',
   },
 ]
 
