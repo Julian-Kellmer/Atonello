@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import blogBackground from "../assets/imagenes/imagenes/blogs/backgground.png";
 import CardBlogs from "../components/CardBlogs";
@@ -49,18 +50,29 @@ const blogsArr = [
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
-//   useEffect(() => {
-//     const fetchBlogs = async () => {
-//       const response = await fetch("https://antonello-panel.onrender.com/api");
-//       const data = await response.json();
-//       console.log(data)
-//       setBlogs(data);
-//     };
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const response = await fetch("https://antonello-panel-7mcg.onrender.com/api");
+      const data = await response.json();
 
-//     fetchBlogs();
+      const formattedData = data.map(post => {
+        const date = new Date(post.createdAt);
 
-//   }, []);
-// console.log(blogs)
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0'); 
+        const day = String(date.getDate()).padStart(2, '0'); 
+
+        const formattedDate = `${year}/${month}/${day}`; 
+
+        return { ...post, createdAt: formattedDate }; 
+      });
+
+      setBlogs(formattedData);
+    };
+
+    fetchBlogs();
+  }, []);
+  
   return (
     <main className="bg-[#fbf8f3]">
       <div
@@ -94,7 +106,7 @@ const Blog = () => {
 
 
       <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap8 my-8 mx-16 md:mt-[-10rem]">
-        {blogsArr.map((blog, index) => (
+        {blogs.map((blog, index) => (
           <CardBlogs
             key={index} // Usa un identificador único para las keys
             title={blog.title}
