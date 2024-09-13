@@ -8,39 +8,39 @@ import VisitShowroom from "../components/gralComponents/VisitShowroom";
 
 const blogsArr = [
   {
-    fecha: "fecha",
-    titulo: "La guía definitiva para elegir un traje a medida.",
+    createdAt: "fecha",
+    title: "La guía definitiva para elegir un traje a medida.",
     imageUrl: blog1,
     description:
       "Descubre cómo elegit el traje perfecto que se ajuste a tu estilo y ocasión.",
   },
   {
-    fecha: "fecha",
-    titulo: "Tendencia en moda masculina para el 2024.",
+    createdAt: "fecha",
+    title: "Tendencia en moda masculina para el 2024.",
     imageUrl: blog2,
     description: "Explora las últimas tendencias en moda masculina.",
   },
   {
-    fecha: "fecha",
-    titulo: "Tendencia en moda masculina para el 2024.",
+    createdAt: "fecha",
+    title: "Tendencia en moda masculina para el 2024.",
     imageUrl: blog2,
     description: "Explora las últimas tendencias en moda masculina.",
   },
   {
-    fecha: "fecha",
-    titulo: "Tendencia en moda masculina para el 2024.",
+    createdAt: "fecha",
+    title: "Tendencia en moda masculina para el 2024.",
     imageUrl: blog2,
     description: "Explora las últimas tendencias en moda masculina.",
   },
   {
-    fecha: "fecha",
-    titulo: "Tendencia en moda masculina para el 2024.",
+    createdAt: "fecha",
+    title: "Tendencia en moda masculina para el 2024.",
     imageUrl: blog2,
     description: "Explora las últimas tendencias en moda masculina.",
   },
   {
-    fecha: "fecha",
-    titulo: "Tendencia en moda masculina para el 2024.",
+    createdAt: "fecha",
+    title: "Tendencia en moda masculina para el 2024.",
     imageUrl: blog2,
     description: "Explora las últimas tendencias en moda masculina.",
   },
@@ -49,17 +49,18 @@ const blogsArr = [
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const response = await fetch("https://antonello-panel.onrender.com/api");
-      const data = await response.json();
-      console.log(data)
-      setBlogs(data);
-    };
+//   useEffect(() => {
+//     const fetchBlogs = async () => {
+//       const response = await fetch("https://antonello-panel.onrender.com/api");
+//       const data = await response.json();
+//       console.log(data)
+//       setBlogs(data);
+//     };
 
-    fetchBlogs();
-  }, []);
+//     fetchBlogs();
 
+//   }, []);
+// console.log(blogs)
   return (
     <main className="bg-[#fbf8f3]">
       <div
@@ -90,13 +91,12 @@ const Blog = () => {
 
       <div className=" md:h-72 bg-[#002B55]"></div>
 
-      <div className="w-screen md:h-72 bg-[#002B55]"></div>
 
 
       <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap8 my-8 mx-16 md:mt-[-10rem]">
         {blogsArr.map((blog, index) => (
           <CardBlogs
-            key={blog._id} // Usa un identificador único para las keys
+            key={index} // Usa un identificador único para las keys
             title={blog.title}
             description={blog.description}
             imageUrl={blog.imageUrl}

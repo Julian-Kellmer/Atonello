@@ -1,69 +1,43 @@
-import robert1 from '../assets/imagenes/testimonios/Robertopalazuelos/robert1.jpg';
-import robert2 from '../assets/imagenes/testimonios/Robertopalazuelos/robert2.jpg';
-import robert3 from '../assets/imagenes/testimonios/Robertopalazuelos/robert3.jpg';
-const TestimoniosEx = () => {
+const TestimoniosEx = ({ name, subName, description, images, index }) => {
   return (
-    <div className='flex flex-col md:py-28 md:gap-32 '>
-      <div className=" md:mt-[-20rem] ">
-        <div className="flex gap-8 px-16 py-8 justify-around">
-          <img className="md:w-[30%] h-auto object-contain" src={robert1} alt="" />
-          <img className="w-[30%] h-auto object-contain hidden md:block " src={robert2} alt="" />
-          <img className="w-[30%] h-auto object-contain hidden md:block  " src={robert3} alt="" />
-        </div>
-        <div className="py-4 md:flex-row flex flex-col">
-          <div className="fles flex-col text-center flex-1 px-16">
-            <h3 className="md:text-8xl text-2xl font-serif">
-              Roberto <br />
-              Palazuelos
-            </h3>
-            <p className="text-xl md:px-32 pt-8 font-medium leading-relaxed">
-              "En Antonello, encontré la perfección en cada detalle. La calidad de sus trajes y el
-              servicio personalizado superan cualquier expectativa. "
-            </p>
-          </div>
-          <div className="md:flex-1  bg-[#f2efea]">
-            <p className="md:text-2xl text-lg md:pr-32 py-8 pl-8 pt-8 font-medium leading-relaxed text-black">
-              Roberto Palazuelos ha confiado en Antonello para confeccionar sus trajes a la medida,
-              camisas elegantes y una variedad de accesorios exclusivos. Cada prenda refleja su
-              estilo sofisticado y su exigencia por la excelencia, haciendo de Antonello su
-              sastrería de referencia para todas sus necesidades de vestimenta.
-            </p>
-          </div>
-        </div>
+    <div className=" pb-24 ">
+      <div className="flex gap-8 px-16 py-8 justify-around">
+        {/* Iterate over the images array to render each image dynamically */}
+        {images.map((image, idx) => (
+          <img
+            key={idx}
+            className="md:w-[30%] h-auto object-contain hidden md:block"
+            src={image}
+            alt={`Testimonio ${name} ${idx}`}
+          />
+        ))}
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-3 md:grid-cols-[2fr_1fr_2fr] gap-8 items-center mx-auto py-4 ">
+        {/* Left Column: Name and SubName */}
+        <div className={`flex flex-col text-center ${index % 2 === 0 ? 'order-1' : 'order-3'}`}>
+          <h3 className="md:text-8xl text-2xl font-didot">{name}</h3>
+          <div className="font-commissioner">
 
-      <div className=" ">
-        <div className="flex gap-8 px-16 py-8 justify-around">
-          <img className="md:w-[30%] h-auto object-contain" src={robert1} alt="" />
-          <img className="w-[30%] h-auto object-contain hidden md:block " src={robert2} alt="" />
-          <img className="w-[30%] h-auto object-contain hidden md:block  " src={robert3} alt="" />
+          <p className="text-xl md:px-32 pt-8 font-medium leading-relaxed">
+            <span className="text-3xl text-Dorado">"</span> {subName}
+            <span className="text-2xl text-Dorado">"</span>
+          </p>
+          </div>
         </div>
 
-        <div className="py-4 md:flex-row  md:items-center md:justify-center flex flex-col ">
-          <div className="flex-1  bg-[#f2efea]">
-            <p className="md:text-2xl text-lg text-end pr-8    py-8 pl-8 pt-8 font-medium leading-relaxed text-black">
-              Roberto Palazuelos ha confiado en Antonello para confeccionar sus trajes a la medida,
-              camisas elegantes y una variedad de accesorios exclusivos. Cada prenda refleja su
-              estilo sofisticado y su exigencia por la excelencia, haciendo de Antonello su
-              sastrería de referencia para todas sus necesidades de vestimenta.
-            </p>
-          </div>
-          <div className='h-32 w-1 hidden md:block bg-[#9d9117]'></div>
-          <div className="fles flex-col text-center flex-1 px-16">
-            <h3 className=" md:text-8xl  text-2xl font-serif">
-              Roberto <br />
-              Palazuelos
-            </h3>
-            <p className="text-xl md:px-32 pt-8 font-medium leading-relaxed">
-              "En Antonello, encontré la perfección en cada detalle. La calidad de sus trajes y el
-              servicio personalizado superan cualquier expectativa. "
-            </p>
-          </div>
+        {/* Vertical Divider */}
+        <div className="hidden md:block w-[2px] h-full bg-[#bbad7e] mx-auto order-2 "></div>
 
+        {/* Right Column: Description */}
+        <div className={`px-8 bg-[#f2efea] ${index % 2 === 0 ? 'order-3' : 'order-1'} `}>
+          <p className="md:text-xl text-lg md: py-8 pl-8 pt-8 font-commissioner leading-relaxed text-black">
+            {description}
+          </p>
         </div>
       </div>
     </div>
   );
 };
+
 export default TestimoniosEx;

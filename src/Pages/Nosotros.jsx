@@ -39,7 +39,7 @@ const Nosotros = () => {
         }}>
         <div className="h-screen bg-gradient-to-t from-black to-transparent flex flex-col justify-end md:pb-40">
           <div className="text-white text-start px-16">
-            <h1 className="text-5xl md:text-9xl my-2 font-serif mx-4">Nuestra Historia</h1>
+            <h1 className="text-5xl md:text-9xl my-2 font-didot mx-4">Nuestra Historia</h1>
             <p className="text-lg md:text-xl w-full md:w-1/2 py-8">
               Hace cuatro décadas, Antonello ha sido sinónimo de elegancia, calidad y tradición en
               el mundo de la sastrería. Fundada por Antonello, nuestra boutique ha crecido para
@@ -58,14 +58,14 @@ const Nosotros = () => {
       <section className='px-4 py-4 md:py-32' >
         <div >
           <div className='flex flex-col'></div>
-          <h2 className='font-serif  text-6xl'>Nuestra mision</h2>
-          <p className='md:w-2/3 w-full md:py-8 p-8 '>
+          <h2 className='font-didot  text-6xl'>Nuestra mision</h2>
+          <p className='md:w-2/3 w-full md:py-8 p-8 font-commissioner text-xl '>
             En Antonello, nuestra misión es transformar la manera en que los hombres se visten, proporcionando trajes y prendas que no solo se ajusten perfectamente, sino que también reflejen el estilo y la personalidad de cada cliente. Nos enorgullece ser parte de los momentos más importantes en la vida de nuestros clientes, desde bodas y galas hasta reuniones de negocios y eventos especiales.</p>
         </div>
         <div className='relative w-full '>
           <img src={antonelloProfile} alt="" className='md:w-[700px] ' />
           <div className='bg-white md:absolute left-[30%] top-[30%] md:w-3/5 w-full '>
-            <p className='px-8 py-8'>Antonello Martínez nació en una pequeña ciudad, donde desde muy joven mostró un gran interés por la moda y el diseño. Tras años de aprendizaje, Antonello decidió llevar su pasión y habilidades a un nuevo nivel. En busca de nuevos horizontes y oportunidades, se trasladó y fundó su propia sastrería en 1984. <br /> <br />
+            <p className='px-8 py-8 font-commissioner'>Antonello Martínez nació en una pequeña ciudad, donde desde muy joven mostró un gran interés por la moda y el diseño. Tras años de aprendizaje, Antonello decidió llevar su pasión y habilidades a un nuevo nivel. En busca de nuevos horizontes y oportunidades, se trasladó y fundó su propia sastrería en 1984. <br /> <br />
 
               Con un enfoque en la calidad artesanal y la atención meticulosa a los detalles, Antonello rápidamente se ganó una reputación por sus trajes impecables y su dedicación al cliente. Su visión siempre ha sido ofrecer prendas que no solo se ajusten perfectamente, sino que también cuenten una historia personal y única para cada cliente. Hoy en día, aunque Antonello ha pasado el testigo a la nueva generación, su legado y valores continúan siendo el corazón de nuestra boutique</p>
             <div className='bg-[#bbad81] w-full h-4'></div>
@@ -74,8 +74,8 @@ const Nosotros = () => {
       </section>
       <section className="flex justify-between items-start px-16 py-8">
         <div className="w-full md:w-1/2 pr-8">
-          <h3 className="text-6xl font-serif mb-8">Nuestros Valores</h3>
-          <ul className="space-y-8">
+          <h3 className="text-6xl font-didot mb-8">Nuestros Valores</h3>
+          <ul className="space-y-8 font-commissioner">
             <li>
               <p className=" text-xl">
                 <span className="font-bold text-[#bbad81] text-2xl mr-2">Calidad:</span>
@@ -115,10 +115,15 @@ const Nosotros = () => {
         ))}
       </article>
 
+      <section className="bg-[#161616] flex flex-col text-center justify-center justify-around items-center  px-8    ">
+        <h6 className="text-white font-didot text-3xl md:text-4xl pt-16 pb-4">MÁS QUE MODA,</h6>
+        <h6 className="text-white font-didot text-3xl md:text-4xl ">ES NUESTRA SASTRERIA</h6>
+        <h6 className="text-white font-birthstone text-6xl pb-16 md:text-8xl ">-creamos arte-</h6>
+      </section>
       <Contacto />
       <VisitShowroom />
 
-    </main> 
+    </main>
   );
 };
 export default Nosotros;

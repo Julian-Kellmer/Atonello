@@ -10,14 +10,14 @@ const CardNosotros = ({ imgUrl, title, text }) => {
               alt={title}
             />
             <div className="bg-[#BCAD7E] text-center py-2 flex justify-center items-end w-full h-3/6 mt-[-2rem]">
-              <h3 className="text-xl font-serif text-white">{title}</h3>
+              <h3 className="text-4xl font-didot text-white">{title}</h3>
             </div>
           </div>
         </div>
   
         {/* Contenido del Texto */}
         <div className="p-6 bg-white">
-          <p className="text-gray-600 text-base">{text}</p>
+          <p className="text-gray-600 text-xl font-commissioner ">{text}</p>
         </div>
       </div>
     );

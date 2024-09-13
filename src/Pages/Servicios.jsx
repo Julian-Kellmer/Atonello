@@ -63,17 +63,17 @@ const infoCatalogos = [
     descripcion:
       'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
     imgUrl: catalogo1,
-    slides: [{ 
-        modalTitle: 'Traje 1',
-        modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-        colors: ['Negro', 'Gris oscuro'],
-        materials: ['Lana', 'Lana']
-      },
-      {
-        modalTitle: 'Traje 2',
-        modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
-        colors: ['Blanco'],
-        materials: ['Seda'],
+    slides: [{
+      modalTitle: 'Traje 1',
+      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+      colors: ['Negro', 'Gris oscuro'],
+      materials: ['Lana', 'Lana']
+    },
+    {
+      modalTitle: 'Traje 2',
+      modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
+      colors: ['Blanco'],
+      materials: ['Seda'],
     }]
   },
   {
@@ -81,7 +81,7 @@ const infoCatalogos = [
     descripcion:
       'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
     imgUrl: catalogo2,
-    slides: [{ 
+    slides: [{
       modalTitle: 'Traje 1',
       modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
       colors: ['Negro', 'Gris oscuro'],
@@ -99,7 +99,7 @@ const infoCatalogos = [
     descripcion:
       'Cada traje es una obra de arte diseñada exclusivamente para ti, asegurando un ajuste perfecto y un estilo impecable. Utilizamos las mejores telas y técnicas de confección para crear un traje que refleje tu personalidad y clase. ',
     imgUrl: catalogo3,
-    slides: [{ 
+    slides: [{
       modalTitle: 'Traje 1',
       modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
       colors: ['Negro', 'Gris oscuro'],
@@ -110,7 +110,7 @@ const infoCatalogos = [
       modalDescription: 'Un traje elegante perfecto para ocasiones formales.',
       colors: ['Negro', 'Gris oscuro'],
       materials: ['Lana', 'Seda'],
-  }]
+    }]
   },
 ];
 
@@ -127,8 +127,8 @@ const Servicios = () => {
           <div className="text-white text-start w-full max-w-screen-lg px-8">
             <div className="flex flex-col md:flex-row items-start md:items-center w-full space-y-4 md:space-y-0 ">
               <div className="md:w-2/3">
-                <h1 className="text-5xl md:text-9xl font-serif mb-4">SERVICIOS</h1>
-                <p className="text-lg md:text-xl leading-relaxed">
+                <h1 className="text-5xl md:text-9xl  font-didot mb-4">SERVICIOS</h1>
+                <p className="text-lg md:text-xl font-commissioner leading-relaxed">
                   En Antonello, ofrecemos una experiencia de sastrería única, con atención
                   meticulosa a cada detalle. Desde trajes a medida y camisas personalizadas hasta
                   accesorios exclusivos, nuestros servicios están diseñados para realzar tu estilo y
@@ -136,7 +136,7 @@ const Servicios = () => {
                   incomparable que solo una boutique de lujo puede ofrecer.
                 </p>
               </div>
-              <button className="mt-8 md:mt-0 md:ml-auto bg-[#bbad81] text-white py-3 px-6 rounded-lg text-lg hover:bg-[#a59870] transition-all duration-200 ease-in-out">
+              <button className="mt-8 md:mt-0 md:ml-auto bg-[#bbad81] text-white py-3 px-3 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
                 Agendar cita
               </button>
             </div>
@@ -145,7 +145,7 @@ const Servicios = () => {
       </div>
 
       <div className="h-72 bg-black flex items-center justify-center">
-        <h2 className="text-white font-serif text-7xl md:text-9xl">Catálogo</h2>
+        <h2 className="text-white font-didot text-7xl md:text-9xl">Catálogo</h2>
       </div>
 
       <article>
@@ -164,6 +164,7 @@ const Servicios = () => {
       </article>
 
       <article className="flex flex-col relative my-16">
+        <h1>hola</h1>
         <div id="servicios" className="px-8">
           <h2 className="text-6xl md:text-8xl font-serif text-black">Otros Servicios</h2>
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
@@ -179,11 +180,8 @@ const Servicios = () => {
           </div>
         </div>
       </article>
-
       <Contacto />
       <VisitShowroom />
-
-      
     </main>
   );
 };
