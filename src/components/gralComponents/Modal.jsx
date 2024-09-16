@@ -32,11 +32,15 @@ const Modal = ({ isOpen, closeModal, slides }) => {
     setSelectedIndex(index);
     setFadeState("fade-enter");
   };
+  
+  const handleSlideChange = () => {
+    setSelectedIndex(0);
+  };
 
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300">
+        <div className="relative md:fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300">
           <div className="bg-[#FBF8F4] p-6 md:rounded-lg md:shadow-lg relative  md:max-w-7xl max-w-full mx-auto">
             <button
               className="z-20 text-4xl absolute top-4 right-4 text-gray-500 hover:text-gray-700"
@@ -46,6 +50,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
             </button>
 
             <Swiper
+              onSlideChange={handleSlideChange}
               navigation={true}
               effect={"fade"}
               pagination={{ clickable: true }}
@@ -86,11 +91,15 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                         modules={[Autoplay]}
                         className="mySwiper"
                       >
+
                         <SwiperSlide>
-                          {slide.colors[selectedIndex]} - Data 1
+                          <img src={slide.colorImages[selectedIndex][0]} alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
-                          {slide.colors[selectedIndex]} - Data 2
+                          <img src={slide.colorImages[selectedIndex][1]} alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src={slide.colorImages[selectedIndex][2]} alt="" />
                         </SwiperSlide>
                       </Swiper>
                     </div>
