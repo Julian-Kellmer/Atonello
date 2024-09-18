@@ -151,7 +151,7 @@ const infoCatalogos = [
     {
       modalTitle: 'Accesorios MANCUERNILLAS',
       modalDescription: 'Nuestras mancuernillas son el toque final perfecto para tu traje. Diseñadas con elegancia y precisión, aportan un detalle sutil pero impactante a tu atuendo, reflejando un estilo refinado y un gusto impecable.',
-      colors: ['Mancuernillas ryan '],
+      colors: ['Mancuernillas ryan'],
       materials: ['Plata'],
       colorImages: [
         [accesoriosMancuerillas, accesoriosMancuerillas, accesoriosMancuerillas],

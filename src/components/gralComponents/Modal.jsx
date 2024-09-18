@@ -13,10 +13,7 @@ import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
   /* Esto es momentaneo. Cuando tengamos las imagenes les ponemos de nombre en comun diferenciandolas por color y se cambia la url. Se hace dinamico */
 }
 const getImageUrlForColor = (color) => {
-  return `https://placehold.co/200x200/${color.replace(
-    / /g,
-    "-"
-  )}/FFFFFF?text=${color}`;
+  return `/src/assets/imagenes/modals/colores/${color.replace(/ /g, "-")}.jpg`;
 };
 
 const Modal = ({ isOpen, closeModal, slides }) => {
@@ -32,7 +29,7 @@ const Modal = ({ isOpen, closeModal, slides }) => {
     setSelectedIndex(index);
     setFadeState("fade-enter");
   };
-  
+
   const handleSlideChange = () => {
     setSelectedIndex(0);
   };
@@ -91,15 +88,23 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                         modules={[Autoplay]}
                         className="mySwiper"
                       >
-
                         <SwiperSlide>
-                          <img src={slide.colorImages[selectedIndex][0]} alt="" />
+                          <img
+                            src={slide.colorImages[selectedIndex][0]}
+                            alt=""
+                          />
                         </SwiperSlide>
                         <SwiperSlide>
-                          <img src={slide.colorImages[selectedIndex][1]} alt="" />
+                          <img
+                            src={slide.colorImages[selectedIndex][1]}
+                            alt=""
+                          />
                         </SwiperSlide>
                         <SwiperSlide>
-                          <img src={slide.colorImages[selectedIndex][2]} alt="" />
+                          <img
+                            src={slide.colorImages[selectedIndex][2]}
+                            alt=""
+                          />
                         </SwiperSlide>
                       </Swiper>
                     </div>
@@ -112,9 +117,22 @@ const Modal = ({ isOpen, closeModal, slides }) => {
                         {slide.modalTitle}
                       </h2>
                       <div className="w-full h-1 bg-[#BCAD7E] mb-4"></div>
-                      <p className="text-sm md:text-base">{slide.modalDescription}</p>
+                      <p className="text-sm md:text-base">
+                        {slide.modalDescription}
+                      </p>
                       <div className="border w-full md:w-3/6 flex flex-col md:flex-row mt-6">
-                        <div className="h-24 w-full border">Image</div>
+                        {slide.colors &&
+                        slide.colors[selectedIndex] !== undefined ? (
+                          <img
+                            src={getImageUrlForColor(
+                              slide.colors[selectedIndex]
+                            )}
+                            alt={slide.colors[selectedIndex]}
+                          />
+                        ) : (
+                          console.log("123")
+                        )}
+
                         <div className="bg-white flex-1 p-4">
                           <ul className="list-disc pl-5">
                             <p className="text-[#BCAD7E] font-medium text-lg font-serif ">
