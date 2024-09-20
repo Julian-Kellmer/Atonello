@@ -1,6 +1,6 @@
 import backgroundImage from '../assets/imagenes/imagenes/nosotros/background.png';
 import localImage from '../assets/imagenes/nosotros/local.png';
-import antonelloProfile from '../assets/imagenes/nosotros/Antonello-profile.jfif';
+import antonelloProfile from '../assets/imagenes/imagenes/home/antonello.png';
 import antonelloTest from '../assets/imagenes/imagenes/nosotros/history2.png';
 import card1 from '../assets/imagenes/nosotros/card1.jfif';
 import card2 from '../assets/imagenes/nosotros/card2.jfif';

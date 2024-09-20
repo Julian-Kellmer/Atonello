@@ -9,6 +9,7 @@ import robert3 from '../assets/imagenes/testimonios/Robertopalazuelos/robert3.jp
 import alberto1 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto1.png'
 import alberto2 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto2.png'
 import alberto3 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto3.png'
+import { useNavigate } from 'react-router-dom';
 
 const testimoniosData = [
   {
@@ -25,31 +26,36 @@ const testimoniosData = [
   },
 ]
 
+
 const Testimonios = () => {
+  const navigate = useNavigate();
+const handleButtonClick = () => {
+  navigate('/Citas')
+}
   return (
     <main className="bg-[#fbf8f3]">
       <div
         id="hero"
-        className="bg-cover bg-no-repeat h-screen bg-fixed bg-center bg-top "
+        className="bg-cover bg-center bg-no-repeat h-screen bg-fixed"
         style={{
           backgroundImage: `url(${testimoniosBackground})`,
         }}>
-        <div className="h-screen bg-gradient-to-t from-[#bbad7e] to-transparent flex justify-center items-center bg-left flex-col">
+        <div className='flex flex-col md:flex-row  justify-between  bg-gradient-to-t from-[#bbad7e] to-transparent  '>
 
-          <div className="text-white text-start w-full max-w-screen-lg px-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center w-full space-y-4 md:space-y-0 ">
-              <div className="md:w-2/3">
-                <h2 className=" font-didot text-5xl md:text-9xl  mb-4">Experiencias <br /> 
-                <span className='font-birthstone'> de clientes</span>
-                </h2>
-                <p className="text-lg md:text-xl leading-relaxed">
-                  Descubre lo que nuestros distinguidos clientes tienen que decir sobre su experiencia con Antonello. Cada testimonio refleja nuestra dedicación a la excelencia, desde la atención personalizada hasta la confección impecable de cada prenda. Lee sus historias y déjate inspirar por la elegancia y el estilo que sólo una sastrería de alta gama puede ofrecer.
-                </p>
-              </div>
-              <button className="mt-8 md:mt-0 md:ml-auto bg-[#bbad81] text-white py-3 px-6 rounded-lg text-lg hover:bg-[#a59870] transition-all duration-200 ease-in-out">
-                Agendar cita
-              </button>
+          <div className="h-screen flex flex-col  md:w-1/2  justify-center md:justify-end md:pb-40">
+            <div className="text-white text-start px-8">
+              <h1 className="text-8xl md:text-9xl my-2 font-didot ">Experiencias <br /><span className='font-birthstone'>de clientes</span></h1>
+              <p className="text-lg md:text-xl w-full  py-8">
+              Descubre lo que nuestros distinguidos clientes tienen que decir sobre su experiencia con Antonello. Cada testimonio refleja nuestra dedicación a la excelencia, desde la atención personalizada hasta la confección impecable de cada prenda. Lee sus historias y déjate inspirar por la elegancia y el estilo que sólo una sastrería de alta gama puede ofrecer.
+              </p>
             </div>
+          </div>
+
+          <div className='flex items-center  md:w-1/2 justify-center'>
+
+          <button onClick={handleButtonClick} className="mt-8  md:mt-0 md:mt-36 bg-[#bbad81] text-white py-4 px-8 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
+            Agendar cita
+          </button>
           </div>
         </div>
       </div>

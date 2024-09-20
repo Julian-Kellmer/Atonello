@@ -1,3 +1,4 @@
+import {  useNavigate } from 'react-router-dom';
 import serviciosBackground from '../assets/imagenes/imagenes/Servicices/background Servicies.png';
 import CardCatalogo from '../components/CardCatalogo';
 import catalogo1 from '../assets/imagenes/imagenes/Servicices/TrajesALaMedida.png';
@@ -41,6 +42,7 @@ import accesoriosCorbatasAzulOscuro from "../assets/imagenes/modals/accesorios/c
 import accesoriosCorbatasRojo from "../assets/imagenes/modals/accesorios/corbatas/rojo/frente.png"
 
 import accesoriosMancuerillas from "../assets/imagenes/modals/accesorios/mancuernillas/frente.png"
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -161,7 +163,7 @@ const infoCatalogos = [
     }]
   },
   {
-    titulo: 'Accesorios',
+    titulo: 'ACCESORIOS',
     descripcion:
       'Completa tu look con nuestros accesorios de lujo, seleccionados para complementar tu estilo único. Desde mancuernillas y corbatas hasta pañuelos y boinas, cada accesorio está diseñado con atención al detalle.',
     imgUrl: catalogo3,
@@ -188,35 +190,43 @@ const infoCatalogos = [
   },
 ];
 
+
+
+
 const Servicios = () => {
+  const navigate = useNavigate();
+const handleButtonClick = () => {
+  navigate('/Citas')
+}
   return (
     <main className='overflow-hidden'>
       <div
         id="hero"
-        className="bg-cover bg-no-repeat h-screen bg-fixed bg-center "
+        className="bg-cover bg-center bg-no-repeat h-screen bg-fixed"
         style={{
           backgroundImage: `url(${serviciosBackground})`,
         }}>
-        <div className="h-screen bg-gradient-to-t from-black to-transparent flex justify-center items-center bg-left flex-col ">
-          <div className="text-white text-start w-full max-w-screen-lg px-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center w-full space-y-4 md:space-y-0 ">
-              <div className="md:w-2/3">
-                <h1 className="text-5xl md:text-9xl  font-didot mb-4">SERVICIOS</h1>
-                <p className="text-lg md:text-xl font-commissioner leading-relaxed">
-                  En Antonello, ofrecemos una experiencia de sastrería única, con atención
-                  meticulosa a cada detalle. Desde trajes a medida y camisas personalizadas hasta
-                  accesorios exclusivos, nuestros servicios están diseñados para realzar tu estilo y
-                  confianza. Descubre la excelencia de la confección artesanal y la calidad
-                  incomparable que solo una boutique de lujo puede ofrecer.
-                </p>
-              </div>
-              <button className="mt-8 md:mt-0 md:ml-auto bg-[#bbad81] text-white py-3 px-3 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
-                Agendar cita
-              </button>
+        <div className='flex flex-col md:flex-row  justify-between  bg-gradient-to-t from-black to-transparent  '>
+
+          <div className="h-screen flex flex-col  md:w-1/2  justify-center md:justify-end md:pb-40">
+            <div className="text-white text-start px-8">
+              <h1 className="text-8xl md:text-9xl my-2 font-didot ">Servicios</h1>
+              <p className="text-lg md:text-xl w-full  py-8">
+                En Antonello, ofrecemos una experiencia de sastrería única, con atención meticulosa a cada detalle. Desde trajes a medida y camisas personalizadas hasta accesorios exclusivos, nuestros servicios están diseñados para realzar tu estilo y confianza. Descubre la excelencia de la confección artesanal y la calidad incomparable que solo una boutique de lujo puede ofrecer.
+              </p>
             </div>
+          </div>
+
+          <div className='flex items-center  md:w-1/2 justify-center'>
+
+          <button onClick={handleButtonClick} className="mt-8  md:mt-0 md:mt-36 bg-[#bbad81] text-white py-4 px-8 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
+            Agendar cita
+          </button>
           </div>
         </div>
       </div>
+
+
 
       <div className="h-72 bg-black flex items-center justify-center">
         <h2 className="text-white font-didot text-7xl md:text-9xl">Catálogo</h2>
