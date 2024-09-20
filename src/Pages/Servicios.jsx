@@ -4,12 +4,18 @@ import catalogo1 from '../assets/imagenes/imagenes/Servicices/TrajesALaMedida.pn
 import catalogo2 from '../assets/imagenes/imagenes/Servicices/catalogo2.jpg';
 import catalogo3 from '../assets/imagenes/imagenes/Servicices/accesorios.png';
 import CardServices from '../components/CardServices';
+
 import zapatos from '../assets/imagenes/imagenes/Servicices/zapatos.png';
 import corbatas from '../assets/imagenes/imagenes/Servicices/corbatas.png';
 import mancuernillas from '../assets/imagenes/imagenes/Servicices/macuernillas.png';
-import carteras from '../assets/imagenes/servicios/carteras.jpg';
-import pañuelos from '../assets/imagenes/servicios/pañuelos.jpg';
-import boinas from '../assets/imagenes/servicios/boinas.jpg';
+import sueter from '../assets/imagenes/imagenes/servicices/sueter.jpeg';
+import chamarras from '../assets/imagenes/imagenes/servicices/chamarra.jpeg';
+import blazers from '../assets/imagenes/imagenes/servicices/blazer.jpeg';
+import jeans from '../assets/imagenes/imagenes/servicices/jeans.jpeg';
+import playeras from '../assets/imagenes/imagenes/servicices/playera.jpeg';
+import polosYCamisas from '../assets/imagenes/imagenes/servicices/polo.jpeg';
+
+
 import Contacto from '../components/gralComponents/Contacto';
 import VisitShowroom from '../components/gralComponents/VisitShowroom';
 import trajeRayasAzulDelante from "../assets/imagenes/modals/trajes/cruzado/rayasAzul/delante.png"
@@ -59,24 +65,45 @@ const services = [
     link: '#',
   },
   {
-    title: 'Carteras',
+    title: 'Suéteres',
     description:
       'Nuestras carteras de cuero están hechas a mano, combinando funcionalidad y elegancia para acompañarte en tu día a día con estilo.',
-    imageUrl: carteras,
+    imageUrl: sueter,
     link: '#',
   },
   {
-    title: 'Pañuelos',
+    title: 'Chamarras',
     description:
       'Añade un toque distintivo a tu traje con nuestros pañuelos de bolsillo, disponibles en una variedad de colores y texturas para cada ocasión.',
-    imageUrl: pañuelos,
+    imageUrl: chamarras,
     link: '#',
   },
   {
-    title: 'Boinas',
+    title: 'Blazer',
+    description:
+      'Completa tu look con nuestras boinas de alta calidad, diseñadas para ofrecerte un estilo clásico y atemporal con un ajuste perfecto..',
+    imageUrl: blazers,
+    link: '#',
+  },
+  {
+    title: 'Jeans',
+    description:
+      'Nuestras carteras de cuero están hechas a mano, combinando funcionalidad y elegancia para acompañarte en tu día a día con estilo.',
+    imageUrl: jeans,
+    link: '#',
+  },
+  {
+    title: 'Playeras',
+    description:
+      'Añade un toque distintivo a tu traje con nuestros pañuelos de bolsillo, disponibles en una variedad de colores y texturas para cada ocasión.',
+    imageUrl: playeras,
+    link: '#',
+  },
+  {
+    title: 'Polos y Camisetas',
     description:
       'Completa tu look con nuestras boinas de alta calidad, diseñadas para ofrecerte un estilo clásico y atemporal con un ajuste perfecto.',
-    imageUrl: boinas,
+    imageUrl: polosYCamisas,
     link: '#',
   },
 ];
