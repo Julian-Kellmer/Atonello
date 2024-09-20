@@ -22,7 +22,7 @@ import trajeTostadoDelante from "../assets/imagenes/modals/trajes/tresPiezas/del
 import trajeTostadoDetras from "../assets/imagenes/modals/trajes/tresPiezas/detras.png"
 import trajeTostadoPiezas from "../assets/imagenes/modals/trajes/tresPiezas/piezas.png"
 import CarruselBrands from '../components/gralComponents/CarruselBrands';
-
+import antonello from '../assets/imagenes/imagenes/home/antonello.png';
 import camisasEsmoquinFrente from "../assets/imagenes/modals/camisas/esmoquin/frente.png"
 import camisasEsmoquinPieza from "../assets/imagenes/modals/camisas/esmoquin/pieza.png"
 
@@ -224,19 +224,19 @@ const Home = () => {
           />
         </figure>
         <div className="w-full md:w-1/2 px-4 mt-8 md:mt-0 items-start">
-          <span className="block text-xl md:text-5xl font-birthstone md:text-right md:mr-24 ">Nuestra</span>
+          <span className="block text-xl md:text-[5rem] pb-8 font-birthstone md:text-right md:mr-24 ">Nuestra</span>
           <h2 className="md:text-8xl text-4xl font-didot text-left md:text-right text-[#333]  ">
             HISTORIA
           </h2>
 
-          <div className='md:absolute relative md:left-[40%] md:top-[45%] md:w-3/6 text-left bg-[#bbad7f] py-4 px-6 font-comissioner   '>
+          <div className='md:absolute  relative md:left-[40%] md:top-[45%] md:w-3/6 text-left bg-[#bbad7f]  md:py-8 py-4 px-6 font-comissioner   '>
 
-            <p className="mt-6 md:text-lg leading-relaxed  text-white">
-              Río Bravo by Antonello es una boutique de sastrería, camisería y accesorios para
+            <p className="mt-6 md:text-xl leading-relaxed  text-white">
+              <b>Río Bravo by Antonello </b>es una boutique de sastrería, camisería y accesorios para
               caballeros con cuatro décadas de experiencia en el mercado. Como una empresa familiar,
               nos hemos destacado por ofrecer las mejores telas y la confección más refinada del país.
             </p>
-            <p className="mt-4 md:text-lg leading-relaxed  text-white">
+            <p className="mt-4 md:text-xl leading-relaxed  text-white">
               Nuestros diseños personalizados y la calidad excepcional de nuestros materiales y mano
               de obra son reconocidos a nivel mundial. Por ello, representamos las marcas más
               exclusivas de telas y accesorios, como lo son Dormeuil, Zignone, Holland & Sherry, y
@@ -250,13 +250,14 @@ const Home = () => {
 
       <div className="bg-black flex w-full hidden md:block ">
         <h3 className='font-didot text-white text-7xl p-12'>EXPERIENCIAS <br />
-        <span className='font-birthstone text-white text-9xl'>
-          de clientes</span>
-          </h3>
+          <span className='font-birthstone text-white text-9xl'>
+            de clientes</span>
+        </h3>
         <Carrusel />
       </div>
       <VisitShowroom />
-      <CarruselBrands imageCount={16}/>
+      <CarruselBrands imageCount={16} />
+      <section className='w-full h-[300px] bg-black bg-no-repeat bg-center bg-[top]' style={{ backgroundImage: `url(${antonello})` }}> '</section>
     </main>
   );
 };
