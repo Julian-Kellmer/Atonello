@@ -39,13 +39,11 @@ const Testimonios = () => {
           <div className="text-white text-start w-full max-w-screen-lg px-8">
             <div className="flex flex-col md:flex-row items-start md:items-center w-full space-y-4 md:space-y-0 ">
               <div className="md:w-2/3">
-                <h1 className="text-5xl md:text-9xl font-serif mb-4">Testimonios</h1>
+                <h2 className=" font-didot text-5xl md:text-9xl  mb-4">Experiencias <br /> 
+                <span className='font-birthstone'> de clientes</span>
+                </h2>
                 <p className="text-lg md:text-xl leading-relaxed">
-                  En Antonello, ofrecemos una experiencia de sastrería única, con atención
-                  meticulosa a cada detalle. Desde trajes a medida y camisas personalizadas hasta
-                  accesorios exclusivos, nuestros servicios están diseñados para realzar tu estilo y
-                  confianza. Descubre la excelencia de la confección artesanal y la calidad
-                  incomparable que solo una boutique de lujo puede ofrecer.
+                  Descubre lo que nuestros distinguidos clientes tienen que decir sobre su experiencia con Antonello. Cada testimonio refleja nuestra dedicación a la excelencia, desde la atención personalizada hasta la confección impecable de cada prenda. Lee sus historias y déjate inspirar por la elegancia y el estilo que sólo una sastrería de alta gama puede ofrecer.
                 </p>
               </div>
               <button className="mt-8 md:mt-0 md:ml-auto bg-[#bbad81] text-white py-3 px-6 rounded-lg text-lg hover:bg-[#a59870] transition-all duration-200 ease-in-out">
@@ -57,26 +55,26 @@ const Testimonios = () => {
       </div>
       <div className=" md:h-72 bg-[#bbad7e]"></div>
       <div className='flex flex-col md:py-28 md:gap-32 '>
-      <div className=" md:mt-[-20rem] ">
+        <div className=" md:mt-[-20rem] ">
 
-      {testimoniosData.map((testimonio,index )=>(
-        <TestimoniosEx 
-        key={index}
-        index={index}
-        images={testimonio.imgUrl}
-        name={testimonio.name}
-        subName={testimonio.subName}
-        description={testimonio.description}
+          {testimoniosData.map((testimonio, index) => (
+            <TestimoniosEx
+              key={index}
+              index={index}
+              images={testimonio.imgUrl}
+              name={testimonio.name}
+              subName={testimonio.subName}
+              description={testimonio.description}
 
-        />
-      ))}  
-      
+            />
+          ))}
+
+        </div>
       </div>
-      </div>
-      
+
       <Contacto />
       <VisitShowroom />
-      <CarruselBrands />
+      <CarruselBrands imageCount={4} />
     </main>
   );
 };

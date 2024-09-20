@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
 import backgroundImage from '../assets/imagenes/imagenes/home/background.png';
-import nuestraHistoria from '../assets/imagenes/imagenes/home/nuestraHistoria.png';
+import nuestraHistoria from '../assets/imagenes/imagenes/home/SobreNosotros.jpg';
 import CardServices from '../components/CardServices';
 import Contacto from '../components/gralComponents/Contacto';
 import blog1 from '../assets/imagenes/blog1.jpg';
 import blog2 from '../assets/imagenes/blog2.jpg';
 import CardBlogs from '../components/CardBlogs';
-import traje1 from '../assets/imagenes/traje1.jpg';
+import traje1 from '../assets/imagenes/servicios/trajesALaMedida.png';
 import camisa1 from '../assets/imagenes/camisa1.jpg';
-import traje2 from '../assets/imagenes/traje2.jpg';
-import CarruselBrands from '../components/gralComponents/CarruselBrands';
+import accesorios from '../assets/imagenes/servicios/accesorios.png';
 import VisitShowroom from '../components/gralComponents/VisitShowroom';
 import Carrusel from '../components/Carrusel';
 import { Link } from 'react-router-dom';
@@ -22,6 +21,7 @@ import trajeAzulMarinoPiezas from "../assets/imagenes/modals/trajes/cruzado/azul
 import trajeTostadoDelante from "../assets/imagenes/modals/trajes/tresPiezas/delante.png"
 import trajeTostadoDetras from "../assets/imagenes/modals/trajes/tresPiezas/detras.png"
 import trajeTostadoPiezas from "../assets/imagenes/modals/trajes/tresPiezas/piezas.png"
+import CarruselBrands from '../components/gralComponents/CarruselBrands';
 
 import camisasEsmoquinFrente from "../assets/imagenes/modals/camisas/esmoquin/frente.png"
 import camisasEsmoquinPieza from "../assets/imagenes/modals/camisas/esmoquin/pieza.png"
@@ -49,12 +49,12 @@ const Home = () => {
         const date = new Date(post.createdAt);
 
         const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0'); 
-        const day = String(date.getDate()).padStart(2, '0'); 
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
 
-        const formattedDate = `${year}/${month}/${day}`; 
+        const formattedDate = `${year}/${month}/${day}`;
 
-        return { ...post, createdAt: formattedDate }; 
+        return { ...post, createdAt: formattedDate };
       });
 
       setPosts(formattedData);
@@ -136,7 +136,7 @@ const Home = () => {
       title: 'Accesorios',
       description:
         'Complementa tu look con nuestros accesorios de lujo seleccionados para complementar tu estilo único.',
-      imageUrl: traje2,
+      imageUrl: accesorios,
       link: '#',
       slides: [{
         modalTitle: 'Accesorios CORBATAS',
@@ -248,33 +248,15 @@ const Home = () => {
 
       <Contacto />
 
-      <div className="bg-black flex w-full hidden md:block asasasa">
+      <div className="bg-black flex w-full hidden md:block ">
+        <h3 className='font-didot text-white text-7xl p-12'>EXPERIENCIAS <br />
+        <span className='font-birthstone text-white text-9xl'>
+          de clientes</span>
+          </h3>
         <Carrusel />
       </div>
-
-      <div className="  bg-[#fbf8f3] flex flex-col py-8 ">
-        <h2 className="text-6xl font-didot my-8 mx-auto py-8">Blog</h2>
-
-        <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 py-8 ">
-          {console.log(posts)}
-          {posts.map((post, index) => (
-            <CardBlogs
-              key={index}
-              createdAt={post.createdAt}
-              title={post.title}
-              imageUrl={post.imageUrl}
-              description={post.description}
-            />
-          ))}
-        </div>
-        {/* <button className="border bg-[#BCAD7E] text-white py-4 px-8 rounded font-commissioner font-semibold my-4">
-          <Link to="/blog">Ver más</Link>
-        </button> */}
-      </div>
-
       <VisitShowroom />
-
-
+      <CarruselBrands imageCount={16}/>
     </main>
   );
 };
