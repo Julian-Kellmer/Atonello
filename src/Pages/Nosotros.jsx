@@ -26,8 +26,8 @@ const Nosotros = () => {
     },
     {
       imgUrl: card3,
-      text: 'En Antonello, creemos en la elegancia atemporal y la artesanía de alta calidad. Cada prenda que confeccionamos refleja nuestra dedicación a estos valores, asegurando que cada cliente reciba un producto único y hecho a la medida.',
-      title: 'Nuestra Filosofía'
+      text: 'Nos comprometemos a ofrecer solo lo mejor en términos de materiales y mano de obra. Utilizamos Las telas más finas y empleamos a los sastres más experimentados para garantizar que cada pieza cumpla con los estándares más altos de calidad y sofisticacion.',
+      title: 'Nuestro compromiso'
     }]
   return (
     <main className='bg-[#fbf8f3]'>

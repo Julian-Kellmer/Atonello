@@ -223,13 +223,13 @@ const Home = () => {
             alt="Nuestra Historia"
           />
         </figure>
-        <div className="w-full md:w-1/2 px-4 mt-8 md:mt-0 items-start">
+        <div className="w-full  md:w-1/2 px-4 mt-8 md:mt-0 items-start">
           <span className="block text-xl md:text-[5rem] pb-8 font-birthstone md:text-right md:mr-24 ">Nuestra</span>
           <h2 className="md:text-8xl text-4xl font-didot text-left md:text-right text-[#333]  ">
             HISTORIA
           </h2>
 
-          <div className='md:absolute  relative md:left-[40%] md:top-[45%] md:w-3/6 text-left bg-[#bbad7f]  md:py-8 py-4 px-6 font-comissioner   '>
+          <div className='2xl:absolute relative  2xl:left-[40%] md:top-[45%] 2xl:w-4/6 text-left bg-[#bbad7f]  md:py-8 py-4 px-6 font-comissioner   '>
 
             <p className="mt-6 md:text-xl leading-relaxed  text-white">
               <b>Río Bravo by Antonello </b>es una boutique de sastrería, camisería y accesorios para
@@ -257,7 +257,7 @@ const Home = () => {
       </div>
       <VisitShowroom />
       <CarruselBrands imageCount={16} />
-      <section className='w-full h-[300px] bg-black bg-no-repeat bg-center bg-[top]' style={{ backgroundImage: `url(${antonello})` }}> '</section>
+      <section className='w-full h-[300px] bg-black bg-no-repeat bg-top ' style={{ backgroundImage: `url(${antonello})` }}> '</section>
     </main>
   );
 };
