@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/imagenes/fondosDePaginas/background-citas.jfif"
+import backgroundImage from "../assets/imagenes/fondosDePaginas/background-citas.jpg"
 import CarruselBrands from "../components/gralComponents/CarruselBrands"
 const Citas = () => {
   return (

@@ -2,9 +2,9 @@ import backgroundImage from '../assets/imagenes/imagenes/nosotros/background.png
 import localImage from '../assets/imagenes/nosotros/local.png';
 import antonelloProfile from '../assets/imagenes/imagenes/home/antonello.png';
 import antonelloTest from '../assets/imagenes/imagenes/nosotros/history2.png';
-import card1 from '../assets/imagenes/nosotros/card1.jfif';
-import card2 from '../assets/imagenes/nosotros/card2.jfif';
-import card3 from '../assets/imagenes/nosotros/card3.jfif';
+import card1 from '../assets/imagenes/nosotros/card1.jpg';
+import card2 from '../assets/imagenes/nosotros/card2.jpg';
+import card3 from '../assets/imagenes/nosotros/card3.jpg';
 import CardNosotros from '../components/CardNosotros';
 import Contacto from '../components/gralComponents/Contacto';
 import VisitShowroom from '../components/gralComponents/VisitShowroom';
