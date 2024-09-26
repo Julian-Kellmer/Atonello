@@ -229,7 +229,7 @@ const Home = () => {
             HISTORIA
           </h2>
 
-          <div className='2xl:absolute relative  2xl:left-[40%] md:top-[45%] 2xl:w-4/6 text-left bg-[#bbad7f]  md:py-8 py-4 px-6 font-comissioner   '>
+          <div className='2xl:absolute relative  2xl:left-[40%] md:top-[45%] 2xl:w-3/6 text-left bg-[#bbad7f]  md:py-8 py-4 px-6 font-comissioner   '>
 
             <p className="mt-6 md:text-xl leading-relaxed  text-white">
               <b>Río Bravo by Antonello </b>es una boutique de sastrería, camisería y accesorios para
