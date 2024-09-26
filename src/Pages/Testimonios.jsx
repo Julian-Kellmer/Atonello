@@ -44,7 +44,7 @@ const handleButtonClick = () => {
 
           <div className="h-screen flex flex-col  md:w-1/2  justify-center md:justify-end md:pb-40">
             <div className="text-white text-start px-8">
-              <h1 className="text-8xl md:text-9xl my-2 font-didot ">Experiencias <br /><span className='font-birthstone'>de clientes</span></h1>
+              <h1 className="text-5xl md:text-9xl my-2 font-didot ">Experiencias <br /><span className='font-birthstone'>de clientes</span></h1>
               <p className="text-lg md:text-xl w-full  py-8">
               Descubre lo que nuestros distinguidos clientes tienen que decir sobre su experiencia con Antonello. Cada testimonio refleja nuestra dedicación a la excelencia, desde la atención personalizada hasta la confección impecable de cada prenda. Lee sus historias y déjate inspirar por la elegancia y el estilo que sólo una sastrería de alta gama puede ofrecer.
               </p>
@@ -53,7 +53,7 @@ const handleButtonClick = () => {
 
           <div className='flex items-center  md:w-1/2 justify-center'>
 
-          <button onClick={handleButtonClick} className="mt-8  md:mt-0 md:mt-36 bg-[#bbad81] text-white py-4 px-8 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
+          <button onClick={handleButtonClick} className="md:mt-0 md:mt-36 bg-black text-white py-4 px-8 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
             Agendar cita
           </button>
           </div>
