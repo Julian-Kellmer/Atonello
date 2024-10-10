@@ -24,12 +24,11 @@ const CardServices = ({ description, title, imageUrl, index, slides }) => {
         <p className="text-xl mb-4 text-white md:group-hover:text-black transition-colors duration-300 font-commissioner font-light">
           {description}
         </p>
-        <dir>
-
+        <div>
           <button onClick={openModal} className="bg-[#bbad81] text-white py-2 px-4 rounded-lg font-commissioner text-sm md:text-base hover:bg-[#a59870] transition-all duration-200 ease-in-out">
             Ver más
           </button>
-        </dir>
+        </div>
       </div>
     </div>
     

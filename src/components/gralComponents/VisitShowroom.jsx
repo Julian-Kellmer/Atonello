@@ -1,4 +1,5 @@
 import footerImage from '../../assets/imagenes/imagenes/visitaNuestroShowRoom/main.jpg';
+import { Link } from 'react-router-dom';
 
 const VisitShowroom = () => {
   return (
@@ -17,7 +18,7 @@ const VisitShowroom = () => {
           Hamburgo 213, Colonia juarez <br /> Cuauhtemoc,
            06600 CDMX
         </h5>
-        <button className="py-2 px-16  text-xl  bg-[#BCAD7E]">Ver ubicacion</button>
+        <button className="py-2 px-16  text-xl  bg-[#BCAD7E]"><Link to="/citas">Ver Ubicación </Link></button>
       </div>
     </div>
   );
