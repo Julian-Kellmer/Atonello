@@ -10,8 +10,8 @@ const VisitShowroom = () => {
         // backgroun:
       }}>
       <div className="flex flex-col md:py-16 py-16 gap-4  text-white items-center flex-1">
-        <h5 className="md:text-8xl text-4xl font-didot  "> <span className='font-birthstone text-4xl md:text-9xl'>Visita nuestro</span> </h5>
-        <h4 className="md:text-7xl text-4xl font-didot">SHOWROOM</h4>
+        <h5 className="md:text-8xl text-4xl font-didot  "> <span className='font-birthstone text-[4rem] md:text-9xl'>Visita nuestro</span> </h5>
+        <h4 className="md:text-7xl text-[4rem] font-didot">SHOWROOM</h4>
       </div>
       <div className="flex flex-col text-white gap-8 flex-1 md:py-16 py-4 text-center items-center justify-center">
         <h5 className="md:text-3xl text-xl px-8 font-commissioner">

@@ -9,8 +9,7 @@ import robert3 from '../assets/imagenes/testimonios/Robertopalazuelos/robert3.jp
 import alberto1 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto1.png'
 import alberto2 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto2.png'
 import alberto3 from '../assets/imagenes/imagenes/expiriences/Alberto pelaez/alberto3.png'
-import { useNavigate } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
 const testimoniosData = [
   {
     imgUrl: [robert1, robert2, robert3],
@@ -28,9 +27,9 @@ const testimoniosData = [
 
 
 const Testimonios = () => {
-  const navigate = useNavigate();
+const navigate = useNavigate();
 const handleButtonClick = () => {
-  navigate('/Citas')
+  navigate('/citas')
 }
   return (
     <main className="bg-[#fbf8f3]">
@@ -52,10 +51,12 @@ const handleButtonClick = () => {
           </div>
 
           <div className='flex items-center  md:w-1/2 justify-center'>
-
-          <button onClick={handleButtonClick} className="md:mt-0 md:mt-36 bg-black text-white py-4 px-8 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
+          <Link to="/citas">
+          
+          <button onClick={handleButtonClick}  className="md:mt-0 md:mt-36 bg-black text-white py-4 px-8 font-commissioner  text-xl hover:bg-[#a59870] transition-all duration-200 ease-in-out">
             Agendar cita
           </button>
+          </Link>
           </div>
         </div>
       </div>

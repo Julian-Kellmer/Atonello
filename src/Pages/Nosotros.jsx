@@ -36,7 +36,7 @@ const Nosotros = () => {
         }}>
         <div className="h-screen bg-gradient-to-t from-black to-transparent flex flex-col justify-end md:pb-40">
           <div className="text-white text-start px-16">
-            <h1 className="text-5xl md:text-9xl my-2 font-didot mx-4">Nuestra Historia</h1>
+            <h1 className="text-[4rem] md:text-9xl my-2 font-didot mx-4">Nuestra Historia</h1>
             <p className="text-lg md:text-xl w-full md:w-1/2 py-8">
               Hace cuatro décadas, Antonello ha sido sinónimo de elegancia, calidad y tradición en
               el mundo de la sastrería. Fundada por Antonello, nuestra boutique ha crecido para
@@ -60,7 +60,7 @@ const Nosotros = () => {
             En Antonello, nuestra misión es transformar la manera en que los hombres se visten, proporcionando trajes y prendas que no solo se ajusten perfectamente, sino que también reflejen el estilo y la personalidad de cada cliente. Nos enorgullece ser parte de los momentos más importantes en la vida de nuestros clientes, desde bodas y galas hasta reuniones de negocios y eventos especiales.</p>
         </div>
         <div className='relative w-full '>
-          <img src={antonelloProfile} alt="" className='md:w-[700px] ' />
+          <img src={antonelloProfile} alt="" className='md:w-[700px]  ' />
           <div className='bg-white md:absolute left-[30%] top-[30%] md:w-3/5 w-full '>
             <p className='px-8 py-8 font-commissioner'>Antonello Martínez nació en una pequeña ciudad, donde desde muy joven mostró un gran interés por la moda y el diseño. Tras años de aprendizaje, Antonello decidió llevar su pasión y habilidades a un nuevo nivel. En busca de nuevos horizontes y oportunidades, se trasladó y fundó su propia sastrería en 1984. <br /> <br />
 
@@ -97,7 +97,7 @@ const Nosotros = () => {
           </ul>
         </div>
         <div className="w-full md:w-1/2">
-          <img src={antonelloTest} alt="Valores de Antonello" className="w-full h-auto object-cover" />
+          <img src={antonelloTest} alt="Valores de Antonello" className="w-full h-auto hidden md:block object-cover" />
         </div>
       </section>
 
