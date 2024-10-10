@@ -13,7 +13,7 @@ const Citas = () => {
           <div className="text-white text-center  flex flex-col gap-4 ">
             <h1 className="text-5xl md:text-9xl my-2 font-didot mx-4 ">CITAS</h1>
             <div className="text-white text-xl font-commissioner text-center max bg-[#bbad81] py-2 px-16 hover:text-2xl hover:rounded transition-all duration-200 ease-in-out">
-              <button >Agendar cita</button>
+              <a href="https://calendly.com/antonello-riobravo/30min?back=1&month=2024-10" target="h_blank">Agendar cita</a>
             </div>
           </div>
 

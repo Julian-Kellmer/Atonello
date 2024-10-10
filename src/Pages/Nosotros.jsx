@@ -9,9 +9,6 @@ import CardNosotros from '../components/CardNosotros';
 import Contacto from '../components/gralComponents/Contacto';
 import VisitShowroom from '../components/gralComponents/VisitShowroom';
 
-
-
-
 const Nosotros = () => {
   const cardData = [
     {
